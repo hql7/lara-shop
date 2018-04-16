@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>售后申请_售后服务_极速售后_购物无忧_lara-shop</title>
+    <meta name="keywords" content="售后申请_售后服务_极速售后_购物无忧_个人中心">
+    <meta name="Description" content="在商城购买的任何一件商品都可以在售后服务里得到快速满意的服务">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_9c3jezrdzeu92j4i.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/after-sale-apply.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a></h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html" class="c-red">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont _apl">
+        <!--退换货申请-->
+        <h3>退换货申请 <strong class="u-right"><a href="###">售后政策</a><a href="###">联系客服</a></strong></h3>
+        <!--商品信息-->
+        <div class="_apl_good">
+            <table>
+                <thead>
+                <tr>
+                    <th class="_g">商品</th>
+                    <th class="_p">单价</th>
+                    <th class="_n">数量</th>
+                </tr>
+                </thead>
+                <tbody id="_apl_g_box">
+                <tr>
+                    <td>
+                        <img src="" alt="good" id="_apl_gimg">
+                        <span id="_apl_gname"></span>
+                    </td>
+                    <td id="_apl_gprice">0.00</td>
+                    <td id="_apl_gnum">1</td>
+                </tr>
+                </tbody>
+            </table>
+            <p><em>*温馨提示：</em>本次售后服务将由<em>为尔商城</em>为您提供; <em>仅退款：</em>未发货，或与卖家协商同意的前提下 <em>退货退款：</em>需退回货物</p>
+        </div>
+        <!--申请表单-->
+        <div class="_apl_">
+            <form id="apply_form" name="apply_form" onsubmit="return false">
+                <ul>
+                    <li class="_fwlx">
+                        <label><b>*</b>服务类型：</label>
+                        <strong id="_fwlx_">
+                            <span>退货退款 <i class="iconfont icon-xuanzhong"></i></span>
+                            <span>换货 <i class="iconfont icon-xuanzhong"></i></span>
+                            <span>维修 <i class="iconfont icon-xuanzhong"></i></span>
+                        </strong>
+                    </li>
+                    <li class="_sl">
+                        <label><b>*</b>提交数量：</label>
+                        <strong>
+                            <button id="_numMinus" onclick="applyNumMinus()">-</button>
+                            <input id="_num" type="text" value="1" name="apply_num" onchange="applyNum(this)">
+                            <button id="_numPlus" onclick="applyNumPlus()">+</button>
+                        </strong>
+                        <span>您最多可以申请的数量为 <em id="_apl_num">1</em>个</span>
+                    </li>
+                    <li id="_back">
+                        <label><b>*</b>退款方式：</label>
+                        <span><input type="radio" name="_g_ret" onclick="refundMethod(0)" required>&nbsp;退款至账户余额</span>
+                        <span><input type="radio" name="_g_ret" onclick="refundMethod(1)">&nbsp;退款至支付宝</span>
+                    </li>
+                    <li class="_yy ref_ali">
+                        <label><b>*</b>支付宝账户：</label>
+                        <input type="text" name="payee_account" id="payee_account">
+                        <span>请填写您的支付宝账户</span>
+                    </li>
+                    <li class="_yy ref_ali">
+                        <label><b>*</b>真实姓名：</label>
+                        <input type="text" name="payee_real_name" id="payee_real_name">
+                        <span>请填写您在支付宝登记的真实姓名</span>
+                    </li>
+                    <li>
+                        <label><b>*</b>货物状态：</label>
+                        <span><input type="radio" name="_g_type" onclick="cargoStatus(1)" required>&nbsp;未收到货</span>
+                        <span><input type="radio" name="_g_type" onclick="cargoStatus(0)">&nbsp;已收到货</span>
+                    </li>
+                    <li class="_yy">
+                        <label><b>*</b>提交原因：</label>
+                        <input type="text" name="reason" id="_apl_reason">
+                        <span>请注意保持商品的完好，建议您先与卖家沟通</span>
+                    </li>
+                    <li class="_mx">
+                        <label><b>*</b>问题描述：</label>
+                        <textarea name="description" id="_apl_desc"></textarea>
+                    </li>
+                    <li>
+                        <label>图片信息：</label>
+                        <button type="button" class="layui-btn" id="_apl_upImg">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="c-999">为了帮助我们更好的解决问题，请您上传图片</span>
+                        <div class="_apl_img_box" id="_apl_img_box"></div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label><b>*</b>申请凭据：</label>
+                        <span><input type="radio" name="_g_proof" onclick="applyProof(0)" required>&nbsp;有发票</span>
+                        <span><input type="radio" name="_g_proof" onclick="applyProof(1)">&nbsp;无发票</span>
+                    </li>
+                    <li><label><b>*</b>收货地址：</label><span id="_apl_adr"></span></li>
+                    <li class="_yy"><label><b>*</b>顾客姓名：</label><input type="text" name="name" id="_apl_name"></li>
+                    <li class="_yy"><label><b>*</b>手机号码：</label><input id="_apl_phone"
+                                                                       type="text" name="phone"><span>提交服务单后，售后专员可能与您电话沟通，请保持手机畅通</span>
+                    </li>
+                    <li class="_yy"><label>电话号码：</label><input id="_apl_ph" type="text"></li>
+                </ul>
+                <button class="_apl_submit" onclick="vada(this)">提交申请</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/va.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/after-sale-apply.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>购物车_正品低价_品质保障_lara-shop</title>
+    <meta name="keywords" content="购物车_正品低价_品质保障_去支付">
+    <meta name="Description" content="添加购物车购买商品轻松便捷品质高效，支付便捷">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_ap8rcchuj5lv7vi.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+<!--头部-->
+<div class="_c_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><span class="shop-name">为尔商城欢迎你</span><a href="user.html" class="c-red" id="user_name"></a><a
+                    href="javascript:void (0)" onclick="logOut()">退出</a></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索-->
+    <div class="_h_c-search">
+        <div class="_c-logo"><a href="index.html" class="site-logo"><img src="../imgs/logo.png"
+                                                                         alt="logo"></a><span>购物车</span>
+        </div>
+        <div class="cart-sea-box">
+            <input id="k" type="text" placeholder="请输入关键词">
+            <button onclick="cartSearch()">搜 索</button>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _cart_c">
+    <h2>全部商品<span id="_c_all_num">（0）</span></h2>
+    <!--标题-->
+    <div class="c_table_title">
+        <span class="t_t_all">全选</span>
+        <span class="t_t_good">商品</span>
+        <span class="t_t_dj">单价</span>
+        <span class="t_t_num">数量</span>
+        <span class="t_t_xj">小计</span>
+        <span class="t_t_cz">操作</span>
+    </div>
+    <!--列表-->
+    <div class="c_table_con">
+        <h3>为尔官方旗舰店 <i class="iconfont icon-kefu1"></i></h3>
+        <div class="c_t_c_box">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+    <!--空列表-->
+    <div class="c_table_con-none">
+        <img src="../imgs/cart-none.png" alt="cart-none" width="96" height="76">
+        <span>您的购物车空空如也</span>
+        <a href="index.html">去购物 >></a>
+    </div>
+    <!--全选 操作-->
+    <div class="_c_settlement">
+        <b><input type="checkbox" class="_c_checkAll" id="_c_checkAll"><i>全选</i></b>
+        <span onclick="del_in_cart('all',0)">删除选中的商品</span>
+        <span onclick="del_in_cart('all',1)">移到我的收藏</span>
+        <!--<span>加入我的收藏</span>-->
+        <strong class="u-right">
+            <b>已选择 <em class="_c_zs">0</em>件商品</b>
+            <b>总价：<em class="_c_zj">￥0</em></b>
+            <button onclick="toSettlement()">去结算</button>
+        </strong>
+    </div>
+    <!--最近浏览-->
+    <div class="_c_recent-browse">
+        <h3>最近浏览 <a href="footprint.html" class="u-right">更多 >></a></h3>
+        <div class="_c_footprint">
+            <div>
+                <img src="" alt="good">
+                <h3></h3>
+                <p><em>￥0.00</em></p>
+                <!--<p><b>1111</b>人评价</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--脚部-->
+<div class="_footer">
+    <div class="_f-service">
+        <ul>
+            <li><i class="iconfont icon-icon--"></i>商品齐全 愉快购物</li>
+            <li><i class="iconfont icon-kuaidi1"></i>仓库直发 快速配送</li>
+            <li><i class="iconfont icon-unie64c"></i>正规渠道 服务到家</li>
+            <li><i class="iconfont icon-2801"></i>实惠低价 购物无忧</li>
+        </ul>
+    </div>
+    <div class="_f-help">
+        <div class="_f-hotline">
+            <h4>免费客服热线</h4>
+            <h5>777-7777-7777</h5>
+            <p>在线时间 09:00 - 18:00</p>
+        </div>
+        <div class="_f-WeChat">
+            <img class="app_img" src="../imgs/er-code.png" alt="WeChat">
+            <p>扫码下载APP商城</p>
+        </div>
+    </div>
+    <div class="_f-website"></div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/header_footer.js"></script>
+<script src="../js/cart.js"></script>
+</body>
+</html>

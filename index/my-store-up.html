@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>我的收藏_商品收藏_关注中心_lara-shop</title>
+    <meta name="keywords" content="我的收藏_商品收藏_关注中心_个人中心">
+    <meta name="Description" content="收藏商品随时关注商品信息购买方便又快捷">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_vh6pgbbj03f5stt9.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/my-store-up.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a>
+            </h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html" class="c-red">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont">
+        <!--收藏选择-->
+        <div class="_st_chose" id="_st_chose">
+            <ul>
+                <li>商品收藏</li>
+                <!--<li>店铺收藏</li>-->
+            </ul>
+            <div>
+                <input type="text" id="good_name" placeholder="请输入商品名称">
+                <button onclick="getMyStore()">搜索</button>
+            </div>
+        </div>
+        <!--收藏列表-->
+        <div class="_st_list">
+            <div class="_st_btn" id="_st_btn"><span class="act_btn">全部收藏</span><span>活动商品</span></div>
+            <div class="_st_good" id="_st_good">
+                <div>
+                    <!--<img src="../imgs/good.jpg" alt="good">-->
+                    <!--<h3>受到法律师傅是短发好看多看两家公司的会计很疯狂</h3>-->
+                    <!--<p>￥<em>1990.00</em></p>-->
+                    <!--&lt;!&ndash;<button><i class="iconfont icon-tianjiagouwuche"></i>加入购物车</button>&ndash;&gt;-->
+                    <!--<b></b>-->
+                </div>
+            </div>
+            <div class="_st_none" id="_st_none">
+                暂无收藏信息
+            </div>
+            <div id="page"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/my-store-up.js"></script>
+</body>
+</html>

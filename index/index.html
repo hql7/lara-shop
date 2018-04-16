@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>为尔商城(lara-shop.cn)-正品保障、低价好货、品质保证、极速发货</title>
+    <meta name="keywords" content="lara-shop.cn_正品保障_低价好货_品质保证_极速发货_鞋服箱包_数码3C">
+    <meta name="Description" content="lara-shop.cn以最优的价格买最好的商品,正规商城发货迅速品质有保障">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_10csvc8221l15rk9.css">
+    <link rel="stylesheet" href="../static/idangerous.swiper2.7.6.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<!--头部-->
+<div class="_header _index_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><span class="shop-name">为尔商城欢迎你</span><a href="login.html">请登录</a><a
+                    class="c-red" href="register.html">免费注册</a></strong>
+            <ul>
+                <li><a href="javascript:void (0)" onclick="loginStatus('message.html')">消息</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('user.html')">个人中心</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('my-order.html?s=0')">我的订单</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-integral.html')">我的积分</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-coupon.html')">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索-->
+    <div class="_h-search">
+        <div class="ing-logo"><a href="index.html"><h1 class="site-logo"><img src="../imgs/logo.png" alt="logo"></h1>
+        </a></div>
+        <div class="ind-sea-box">
+            <input type="text">
+            <button onclick="search()">搜 索</button>
+            <ul></ul>
+        </div>
+        <div class="ind-cart" onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>我的购物车 <span>0</span>
+        </div>
+    </div>
+    <!--菜单-->
+    <div class="_h-nav">
+        <div class="all-classify">
+            <i class="iconfont icon-caidanA"></i>全部商品分类
+            <div class="menu index-menu">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="main-nav">
+            <ul></ul>
+        </div>
+    </div>
+    <!--右侧快捷方式-->
+    <div class="_h-quick-tabs">
+        <a onclick="loginStatus('user.html')"><i class="iconfont icon-user"></i></a>
+        <a onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>
+            购物车
+        </a>
+        <a onclick="loginStatus('my-store-up.html')"><i class="iconfont icon-shoucang"></i></a>
+        <a onclick="loginStatus('footprint.html')" href="###"><i class="iconfont icon-chakan"></i></a>
+        <a href="###"><i class="iconfont icon-kefu-copy"></i></a>
+        <a class="tabs-top" onclick="goTop()" href="javascript:void(0)"><i class="iconfont icon-shang"></i></a>
+    </div>
+</div>
+<!--主体-->
+<div class="_content">
+    <!--轮播-->
+    <div class="carousel">
+        <div class="swiper-container swiper-box">
+            <div class="swiper-wrapper swiper-item-box" id="swiper-item-box"></div>
+            <div class="pagination swiper-span"></div>
+            <div class="swipePrev swipePN" id="swipePrev"><i class="iconfont icon-right1 c-255"></i></div>
+            <div class="swipeNext swipePN" id="swipeNext"><i class="iconfont icon-you c-255"></i></div>
+        </div>
+        <div class="ind-info">
+            <div class="info">
+                <img src="../imgs/user-avatar.png" alt="广告">
+                <p>你好，请登录</p>
+                <h4><a href="login.html">登录</a><a href="register.html">注册</a></h4>
+            </div>
+            <div class="ind-notice">
+                <h2>公告 <a class="u-right" href="help.html?h=0">更多</a></h2>
+                <ul id="ind-notice"></ul>
+            </div>
+            <div class="quick-lane">
+                <div>
+                    <a href="javascript:void (0)" onclick="loginStatus('my-store-up.html')">
+                        <i class="iconfont icon-shoucang"></i>
+                        <p>我的收藏</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:void (0)" onclick="loginStatus('my-order.html?s=0')">
+                        <i class="iconfont icon-dingdan"></i>
+                        <p>我的订单</p>
+                    </a>
+                </div>
+                <div class="last-div">
+                    <a href="javascript:void (0)" id="seller_in">
+                        <i class="iconfont icon-shangjia"></i>
+                        <p>商家入驻</p>
+                    </a>
+                </div>
+            </div>
+            <div class="info-img">
+                <div class="swiper-container swiper-info-box" id="switch-right">
+                    <div class="swiper-wrapper swiper-item-box-right" id="swiper-item-box-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--限时抢购-->
+    <div class="ind-time-sale ind-model" id="flash_goods">
+        <h2><span><i class="iconfont icon-xianshiqianggou"></i>限时抢购</span>
+            <a href="group-flash.html?t=1" class="u-right">查看更多 <i class="iconfont icon-right"></i></a></h2>
+        <div class="swiper-container2 swiper-box2">
+            <div class="swiper-wrapper swiper-item-box2" id="swiper-box2">
+            </div>
+        </div>
+    </div>
+    <!--热卖商品-->
+    <div class="ind-hot-good ind-model">
+        <h2>热卖商品</h2>
+        <div class="hot-good" id="hot-good"></div>
+        <div class="hot-tui-guang" id="hot-tui-guang"></div>
+    </div>
+    <!--广告图区-->
+    <div class="ind-ad ind-model" id="ind-ad"></div>
+    <!--商品分区展示-->
+    <div class="ind-zone" id="ind-zone"></div>
+    <!--猜你喜欢-->
+    <div class="ind-more-like">
+        <h2><span></span><strong>猜你喜欢</strong><span></span></h2>
+        <div class="more-box" id="more-box"></div>
+    </div>
+</div>
+<!--脚部-->
+<div class="_footer">
+    <div class="_f-service">
+        <ul>
+            <li><i class="iconfont icon-icon--"></i>商品齐全 愉快购物</li>
+            <li><i class="iconfont icon-kuaidi1"></i>仓库直发 快速配送</li>
+            <li><i class="iconfont icon-unie64c"></i>正规渠道 服务到家</li>
+            <li><i class="iconfont icon-2801"></i>实惠低价 购物无忧</li>
+        </ul>
+    </div>
+    <div class="_f-help">
+        <div class="_f-hotline">
+            <h4>联系我们</h4>
+            <h5>777-7777-7777</h5>
+            <p>周一至周日8:00-18:00</p>
+            <p>(仅收市话费)</p>
+        </div>
+        <div class="_f-WeChat">
+            <img class="app_img" src="../imgs/er-code.png" alt="WeChat">
+            <p>扫码下载APP商城</p>
+        </div>
+    </div>
+    <div class="_f-website">
+        <p class="mod_copyright_auth">
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_1" href="http://www.miibeian.gov.cn"
+               target="_blank">经营性网站备案中心</a>
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_2" href="http://t.knet.cn"
+               target="_blank">可信网站信用评估</a>
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_3" href="http://www.cyberpolice.cn" target="_blank">网络警察提醒你</a>
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_4" href="http://www.cecdc.com/"
+               target="_blank">诚信网站</a>
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_5" href="http://www.12377.cn/" target="_blank">中国互联网举报中心</a>
+            <a class="mod_copyright_auth_ico mod_copyright_auth_ico_6" href="http://www.12377.cn/node_548446.htm"
+               target="_blank">网络举报APP下载</a>
+        </p>
+    </div>
+
+</div>
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/idangerous.swiper2.7.6.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/header_footer.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>

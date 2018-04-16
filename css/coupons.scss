@@ -1,0 +1,110 @@
+@import "header";
+@import "footer";
+@import "util";
+
+//-------------------------------------------------
+
+._cp_option {
+  background-color: #f4f4f4;
+  line-height: 50px;
+  margin: 10px 0 20px;
+  > ul {
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    width: 120px;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      color: #f40000;
+    }
+  }
+  .act {
+    color: #f40000;
+  }
+}
+
+._cp_list {
+  overflow: hidden;
+  padding-top: 30px;
+  > div {
+    float: left;
+    width: 31.33%;
+    margin: 10px 1% 30px;
+    height: 160px;
+    line-height: 22px;
+    color: #fff;
+    background: url("../imgs/_cp_list.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    > i {
+      position: absolute;
+      top: 30px;
+      right: 120px;
+      color: #feffd4;
+      font-size: 40px;
+    }
+    > button {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      width: 38px;
+      height: 112px;
+      color: #a5cdf6;
+      font-size: 14px;
+      border: 1px solid #5eadf0;
+      background-color: #f5faff;
+      border-radius: 50px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  ._l_t {
+    height: 50px;
+    > div {
+      float: left;
+      margin-right: 10px;
+      height: 100%;
+      font-size: 14px;
+    }
+    em {
+      font-size: 60px;
+      line-height: 44px;
+      font-weight: bold;
+    }
+    sup {
+      vertical-align: 20px;
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  ._l_b {
+    width: 205px;
+    > h3 {
+      height: 44px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin: 5px 0;
+    }
+  }
+
+  ._cp_sy {
+    text-align: right;
+  }
+
+  .nums-none {
+    background-color: #cfcfcf;
+    border-color: #ccc;
+    color: #fff;
+  }
+}

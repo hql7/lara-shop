@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>lara-shop_欢迎登陆</title>
+    <meta name="keywords" content="lara-shop_登录">
+    <meta name="Description" content="lara-shop用户登录页">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_bhy4c2aaphvholxr.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div class="log-top">
+    <h1 class="site-logo"><img src="../imgs/logo.png" alt="logo" width="219" height="62" onclick="touristModel()">欢迎登陆
+    </h1>
+</div>
+<div class="log-body">
+    <div class="log-submit-box">
+        <a href="" id="login_ad"><img class="login_ad_img"  src="../imgs/log-good.png" alt="good"></a>
+        <form class="log-form" id="login_form" onsubmit="return false" autocomplete="off" name="">
+            <h3>用户登录</h3>
+            <p class="err-box"><i class="iconfont icon-jinggao"></i><span class="err-msg"></span></p>
+            <ul id="act_">
+                <li><label><i class="iconfont icon-yonghu"></i></label>
+                    <input class="log_name" name="log_name" id="log_name" placeholder="账户名/手机号/邮箱" type="text">
+                    <i class="iconfont icon-guanbi u-clear"></i></li>
+                <li><label><i class="iconfont icon-14-01"></i></label>
+                    <input class="log_pass" name="log_pass" id="log_pass"
+                           onfocus="focusPassClear(this)" placeholder="密码" type="password" autocomplete="new-password"/>
+                    <!--<input type="hidden" id="true_pass" name="true_pass">-->
+                    <i class="iconfont icon-guanbi u-clear"></i></li>
+                <li class="yzm-box"><label><i class="iconfont icon-anquan"></i></label>
+                    <input class="log_code" name="log_code" id="log_code" type="text" placeholder="验证码">
+                    <img class="yzm-img" src="" alt="">
+                </li>
+            </ul>
+            <p><a href="register.html">立即注册</a><a href="find-pass.html" class="log-back-pas">找回密码</a></p>
+            <h4 class="log-btn-box">
+                <input type="submit" value="登录" onclick="vada()">
+            </h4>
+            <!--第三方登录-->
+            <!-- <h5>
+                 <span id="qqLoginBtn"><i class="iconfont icon-qq1 c-qq"></i></span>
+                 <span id="login_container"><i class="iconfont icon-weixin-copy c-wx"></i></span>
+             </h5>-->
+        </form>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script type="text/javascript"
+        src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
+        data-appid="101455905"
+        data-redirecturi="http://www.lara-shop.cn"
+        charset="utf-8"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script src="../js/va.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

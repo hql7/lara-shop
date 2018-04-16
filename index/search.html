@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>商品搜索_价格_销量_品牌_活动_评价_lara-shop</title>
+    <meta name="keywords" content="商品搜索_价格_销量_品牌_活动_评价_个人中心">
+    <meta name="Description" content="商品搜索根据价格、销量、品牌、活动等条件生成排序列表">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_tnn42pmpb531h5mi.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<body>
+<!--头部-->
+<div class="_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><span class="shop-name">为尔商城欢迎你</span><a class="c-red" href="login.html">请登录</a><a
+                    href="register.html">免费注册</a></strong>
+            <ul>
+                <li><a href="javascript:void (0)" onclick="loginStatus('message.html')">消息</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('user.html')">个人中心</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('my-order.html?s=0')">我的订单</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-integral.html')">我的积分</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-coupon.html')">我的优惠券</a></li>
+                <li><a href="help.html"> </a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索-->
+    <div class="_h-search">
+        <div class="ing-logo"><a href="index.html"><h1 class="site-logo"><img src="../imgs/logo.png" alt="logo"></h1>
+        </a></div>
+        <div class="ind-sea-box">
+            <input type="text" placeholder="" id="keyWord">
+            <button onclick="conditionalProcessing({key:true})">搜 索</button>
+            <ul></ul>
+        </div>
+        <div class="ind-cart" onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>我的购物车 <span>0</span>
+        </div>
+    </div>
+    <!--菜单-->
+    <div class="_h-nav">
+        <div class="all-classify">
+            <i class="iconfont icon-caidanA"></i>全部商品分类
+            <div class="menu">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="main-nav">
+            <ul></ul>
+        </div>
+    </div>
+    <!--右侧快捷方式-->
+    <div class="_h-quick-tabs">
+        <a onclick="loginStatus('user.html')"><i class="iconfont icon-user"></i></a>
+        <a onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>
+            购物车
+        </a>
+        <a onclick="loginStatus('my-store-up.html')"><i class="iconfont icon-shoucang"></i></a>
+        <a onclick="loginStatus('footprint.html')"><i class="iconfont icon-chakan"></i></a>
+        <a href="###"><i class="iconfont icon-kefu-copy"></i></a>
+        <a class="tabs-top" onclick="goTop()" href="javascript:void(0)"><i class="iconfont icon-shang"></i></a>
+    </div>
+</div>
+<!--主体-->
+<div class="content">
+    <!--面包屑导航-->
+    <div class="s_crumb">
+        <!--全部结果 > <span></span>-->
+    </div>
+    <!--快速搜索区-->
+    <div class="s_selector">
+        <div class="s_s-p">
+            <div class="s_s-pj-n">
+                品牌：
+            </div>
+            <div class="s_s-p-c">
+            </div>
+        </div>
+        <div class="s_s-j">
+            <div class="s_s-pj-n">
+                价格：
+            </div>
+            <div class="s_s-j-c">
+            </div>
+        </div>
+    </div>
+    <!--列表区-->
+    <div class="s_g_list">
+        <!--热卖广告区-->
+        <div class="s_hot">
+            <h3><strong>推荐热卖</strong><i class="u-right">广告</i></h3>
+            <div>
+                <!--<img src="../imgs/er-code.png" alt="">-->
+                <h4></h4>
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <!--搜索商品列表-->
+        <div class="s_good">
+            <p class="s_g_p1" id="s_g_p1">
+                <a onclick="conditionalProcessing({sort:0})" class="s_checked">综合<i class="iconfont icon-xia1"></i></a>
+                <a onclick="conditionalProcessing({sort:1})">销量<i class="iconfont icon-xia1"></i></a>
+                <a onclick="conditionalProcessing({sort:2})">评价<i class="iconfont icon-xia1"></i></a>
+                <a onclick="conditionalProcessing({sort:3})">新品<i class="iconfont icon-xia1"></i></a>
+                <a onclick="conditionalProcessing({sort:4})">价格<i class="iconfont icon-xia1"></i></a>
+            </p>
+            <p class="s_g_p2">
+                <a><input type="checkbox" id="commend" onchange="isCommend(this)"><label
+                        for="commend">推荐好货</label></a>
+                <a><input type="checkbox" id="prom" onchange="isProm(this)"><label for="prom">优惠促销</label></a>
+                <a><input type="checkbox" id="in_stock" onchange="isStock(this)"><label
+                        for="in_stock">仅显示有货</label></a>
+            </p>
+            <div class="s_l_box">
+                <!-- <div>
+                     &lt;!&ndash;&lt;!&ndash;<img class="s_img_l" src="../imgs/zone-ad-demo.jpg" alt="">&ndash;&gt;&ndash;&gt;
+                     &lt;!&ndash;<p>&ndash;&gt;
+                         &lt;!&ndash;&lt;!&ndash;<span><img class="s_img_s" src="../imgs/zone-ad-demo.jpg" alt=""></span>&ndash;&gt;&ndash;&gt;
+                         &lt;!&ndash;&lt;!&ndash;<span><img class="s_img_s" src="../imgs/er-code.png" alt=""></span>&ndash;&gt;&ndash;&gt;
+                         &lt;!&ndash;&lt;!&ndash;<span><img class="s_img_s" src="../imgs/user-avatar.png" alt=""></span>&ndash;&gt;&ndash;&gt;
+                         &lt;!&ndash;&lt;!&ndash;<span><img class="s_img_s" src="../imgs/ad-medo.jpg" alt=""></span>&ndash;&gt;&ndash;&gt;
+                     &lt;!&ndash;</p>&ndash;&gt;
+                     &lt;!&ndash;<h5>￥</h5>&ndash;&gt;
+                     &lt;!&ndash;<h3></h3>&ndash;&gt;
+                     &lt;!&ndash;<h6><span></span>条评价</h6>&ndash;&gt;
+                     &lt;!&ndash;<h4><i class="iconfont icon-ziying"></i></h4>&ndash;&gt;
+                 </div>-->
+            </div>
+            <div class="s_l_none">
+                暂无符合条件的商品
+            </div>
+            <!--分页-->
+            <div id="page"></div>
+        </div>
+    </div>
+    <!--猜你喜欢-->
+    <div class="s_like">
+        <h3><strong>猜你喜欢</strong> <span class="u-right"><i class="iconfont icon-shuaxin" onclick="sendYouLike()"></i>换一批</span>
+        </h3>
+        <div class="s_like_box"></div>
+    </div>
+</div>
+<!--脚部-->
+<div class="_footer">
+    <div class="_f-service">
+        <ul>
+            <li><i class="iconfont icon-icon--"></i>商品齐全 愉快购物</li>
+            <li><i class="iconfont icon-kuaidi1"></i>仓库直发 快速配送</li>
+            <li><i class="iconfont icon-unie64c"></i>正规渠道 服务到家</li>
+            <li><i class="iconfont icon-2801"></i>实惠低价 购物无忧</li>
+        </ul>
+    </div>
+    <div class="_f-help">
+        <div class="_f-hotline">
+            <h4>免费客服热线</h4>
+            <h5>777-7777-7777</h5>
+            <p>在线时间 09:00 - 18:00</p>
+        </div>
+        <div class="_f-WeChat">
+            <img class="app_img" src="../imgs/er-code.png" alt="WeChat">
+            <p>扫码下载APP商城</p>
+        </div>
+    </div>
+    <div class="_f-website"></div>
+</div>
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/header_footer.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

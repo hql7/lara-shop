@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>售后详情_售后进度_服务详情_购物无忧_lara-shop</title>
+    <meta name="keywords" content="售后详情_售后进度_服务详情_购物无忧_个人中心">
+    <meta name="Description" content="查看售后服务的详细状态，购物服务轻松把握一步到到位">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_p9xb2r1396zb0529.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/after-sale-details.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><span>为尔商城</span></a></h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html" class="c-red">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont">
+        <!--售后详情-->
+        <div class="_asd_detail mian-mod">
+            <h3>
+                <span>售后详情</span>
+                <strong class="u-right"><a href="###">售后政策</a><a href="###">联系客服</a></strong>
+            </h3>
+            <div>
+                <div class="_asd_shop">
+                    本店售后由<strong>为尔商城</strong>提供
+                </div>
+                <div class="_asd_good">
+                    <img id="_asd_img" src="" alt="good">
+                    <div>
+                        <p><label>服务单编号：</label><em id="_asd_r_no"></em></p>
+                        <h3 id="_asd_g_name"></h3>
+                        <p><span id="_asd_g_num"></span><span id="_asd_type"></span><span id="_asd_time"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--售后进度-->
+        <div class="_asd_progress">
+            <h3>售后进度说明</h3>
+            <div>
+                <label>处理环节：</label>
+                <div class="_asd_timeline">
+                    <ul class="layui-timeline" id="_asd_timeline">
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title"></h3>
+                                <p>
+                                </p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <button onclick="cancelAfterSale()">取消服务单</button>
+                <span>取消服务单将撤销售后服务，如果您的订单已经在售后服务中请谨慎操作</span>
+            </p>
+        </div>
+        <!--货运单信息-->
+        <div class="_asd_back" id="_asd_back">
+            <h3><i class="iconfont icon-shouhuodizhi3"></i><span>退货地址</span></h3>
+            <p><label>收货人：</label><span id="_ab_name"></span><span id="_ab_phone"></span></p>
+            <p><label>收货地址：</label><span id="_ad_addr"></span></p>
+            <div class="_asd_back_say">
+                <h3>退换货说明</h3>
+                <p>退换货需要注意以下几点</p>
+                <p>1.保证商品未使用过，不影响二次销售。</p>
+                <p>2.请用纸条写上：订单号、姓名、电话号码、退货原因、放在退回包裹内。</p>
+                <p>3.请用原箱子，包装好退回。</p>
+                <p>4.寄出后，请向客服团购退回快递底单，方便客服为您跟进</p>
+                <p>5.请用普通快递退回即可，不接受货到付款。</p>
+                <p>6.退货运费买家自理.</p>
+                <div>
+                    <p>未与商家协商一致，请勿使用到付或平邮，以免商家拒签货物</p>
+                    <p>交易的钱款还在商城账户，确保您资金安全</p>
+                    <p>请填写真实退货物流信息，逾期未填写，退货申请将关闭</p>
+                </div>
+            </div>
+            <div class="_asd_back_fill">
+                <h3>选择快递公司
+                    <select name="express" id="_asd_express" onchange="changeExpress(this)">
+                        <option value="">请选择</option>
+                    </select>
+                </h3>
+                <h3>填写物流单号</h3>
+                <input type="text" id="_asd_no" placeholder="请填写您退货的物流单号，商家可通过物流单号快速受理">
+                <button onclick="submitExpress(this)">确认提交</button>
+            </div>
+        </div>
+        <!--服务单信息-->
+        <div class="_asd_info">
+            <h3>服务单信息</h3>
+            <table id="_asd_info_list">
+                <tr>
+                    <td>服务单状态</td>
+                    <td id="_asd_i_sta"></td>
+                </tr>
+                <tr>
+                    <td>售后类型</td>
+                    <td id="_asd_i_tp"></td>
+                </tr>
+                <tr class="refund_type">
+                    <td>退款方式</td>
+                    <td id="_asd_i_tk"></td>
+                </tr>
+                <tr class="refund_amount">
+                    <td>退款金额</td>
+                    <td id="_asd_i_am"></td>
+                </tr>
+                <tr class="ali_info">
+                    <td>支付宝账户</td>
+                    <td id="_asd_i_zh"></td>
+                </tr>
+                <tr class="ali_info">
+                    <td>真实姓名</td>
+                    <td id="_asd_i_xm"></td>
+                </tr>
+                <tr>
+                    <td>物流公司</td>
+                    <td id="_asd_i_wl"></td>
+                </tr>
+                <tr>
+                    <td>货运单号</td>
+                    <td id="_asd_i_dh"></td>
+                </tr>
+                <tr>
+                    <td>问题描述</td>
+                    <td id="_asd_i_mx"></td>
+                </tr>
+                <tr>
+                    <td>卖家收货信息</td>
+                    <td>
+                        <p><label>收货地址：</label><span id="__seller_adr"></span></p>
+                        <p><label>收货人：</label><span id="__seller_consignee"></span></p>
+                        <p><label>邮编：</label><span id="__seller_zip"></span></p>
+                        <p><label>电话：</label><span id="__seller_phone"></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>联系信息</td>
+                    <td><label>联系人：</label><span id="_asd_i_linkman"></span>
+                        <label>手机：</label><span id="_asd_i_linkphone"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/after-sale-details.js"></script>
+</body>
+</html>

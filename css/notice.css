@@ -1,0 +1,394 @@
+._header {
+  height: 200px;
+  border-bottom: 2px solid #ea1f2d; }
+
+._index_header {
+  border: none; }
+  ._index_header .menu {
+    top: 40px; }
+
+._h-shortcut {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f2f2f2; }
+  ._h-shortcut .w {
+    width: 1200px;
+    margin: 0 auto; }
+    ._h-shortcut .w strong a {
+      color: #999;
+      border: none;
+      margin-left: 15px; }
+      ._h-shortcut .w strong a:hover {
+        color: #f51322; }
+  ._h-shortcut ul {
+    float: right; }
+    ._h-shortcut ul a {
+      padding: 0 15px;
+      border-right: 1px solid #ddd; }
+      ._h-shortcut ul a:hover {
+        color: #fa0818; }
+  ._h-shortcut li {
+    float: left; }
+  ._h-shortcut .last {
+    position: relative;
+    border-right: none; }
+    ._h-shortcut .last:hover img {
+      display: inline-block; }
+    ._h-shortcut .last img {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      display: none; }
+
+._h-search {
+  width: 1200px;
+  margin: 0 auto;
+  height: 120px; }
+
+.ing-logo {
+  float: left;
+  margin-top: 40px; }
+  .ing-logo img {
+    width: 150px;
+    height: 80px; }
+
+.ind-sea-box {
+  margin-top: 40px;
+  width: 600px;
+  height: 40px;
+  border: 1px solid #f51322;
+  float: left;
+  margin-left: 140px; }
+  .ind-sea-box input {
+    float: left;
+    width: 500px;
+    height: 100%;
+    border: none;
+    padding-left: 15px;
+    box-sizing: border-box; }
+  .ind-sea-box button {
+    width: 100px;
+    height: 100%;
+    border: none;
+    background-color: #f51322;
+    color: #fff;
+    font-size: 16px; }
+  .ind-sea-box ul {
+    width: 600px;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .ind-sea-box ul li {
+      float: left;
+      margin-right: 10px; }
+    .ind-sea-box ul a:hover {
+      color: #db1926; }
+
+.ind-cart {
+  float: right;
+  text-align: center;
+  width: 180px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #dfdfdf;
+  margin-top: 40px;
+  color: #f71726; }
+  .ind-cart i {
+    margin-right: 7px; }
+  .ind-cart span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #f71726;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 5px; }
+
+._h-nav {
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto 0; }
+
+.all-classify {
+  position: relative;
+  width: 190px;
+  height: 100%;
+  font-size: 14px;
+  background-color: #f51322;
+  float: left;
+  color: #fff;
+  padding-left: 20px;
+  box-sizing: border-box; }
+  .all-classify:hover .menu {
+    display: block; }
+  .all-classify > i {
+    margin-right: 12px;
+    vertical-align: -2px; }
+  .all-classify .menu-i-right {
+    vertical-align: middle;
+    color: #999;
+    float: right; }
+
+.main-nav {
+  margin-left: 190px; }
+  .main-nav ul {
+    overflow: hidden; }
+  .main-nav li {
+    float: left; }
+    .main-nav li a {
+      padding: 5px 25px;
+      font-size: 16px;
+      color: #333;
+      font-weight: bold; }
+      .main-nav li a:hover {
+        color: #f51322; }
+
+.menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 480px;
+  z-index: 9;
+  display: none;
+  border-top: 2px solid #f51322;
+  background-color: #ececec; }
+  .menu li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 25px;
+    font-size: 14px; }
+    .menu li > a {
+      color: #444; }
+    .menu li:hover {
+      background-color: #fafafa; }
+      .menu li:hover .menu2 {
+        display: block; }
+  .menu a:hover {
+    color: #f51322; }
+  .menu .lv2 {
+    font-weight: bold;
+    margin-right: 5px; }
+
+.menu2 {
+  position: absolute;
+  top: 0;
+  left: 190px;
+  z-index: 11;
+  background-color: #fff;
+  color: #333;
+  width: 800px;
+  height: 480px;
+  overflow: hidden;
+  padding: 10px 0;
+  box-sizing: border-box;
+  display: none; }
+  .menu2 > div {
+    overflow: hidden; }
+  .menu2 h2 {
+    float: left;
+    width: 80px;
+    font-weight: bold;
+    background-color: #fff;
+    padding-left: 20px; }
+  .menu2 b {
+    font-weight: bold;
+    color: #666; }
+  .menu2 p {
+    padding: 0 25px;
+    margin-left: 90px; }
+
+.menu3 {
+  margin-right: 24px;
+  margin-bottom: 10px; }
+
+._h-quick-tabs {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 35px;
+  height: 100%;
+  padding: 260px 0;
+  text-align: center;
+  background-color: #6e6568;
+  box-sizing: border-box;
+  font-size: 14px; }
+  ._h-quick-tabs > a {
+    padding: 5px;
+    margin: 20px 0;
+    display: block;
+    color: #fff; }
+    ._h-quick-tabs > a:hover {
+      background-color: #b11822; }
+  ._h-quick-tabs i {
+    font-size: 20px; }
+  ._h-quick-tabs .tabs-top {
+    margin-top: 250px; }
+
+._f-service {
+  padding: 30px 0;
+  background-color: #f6f5f5;
+  border-bottom: 1px solid #e2e2e2; }
+  ._f-service ul {
+    width: 1200px;
+    margin: 0 auto;
+    height: 42px;
+    line-height: 42px;
+    color: #444;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; }
+  ._f-service li {
+    width: 25%;
+    float: left; }
+  ._f-service i {
+    margin-right: 10px;
+    color: #e44b52;
+    font-size: 32px;
+    vertical-align: -4px; }
+  ._f-service .icon-2801 {
+    font-size: 30px; }
+
+._f-help {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden; }
+  ._f-help > div {
+    float: left;
+    width: 16.66%;
+    padding-left: 55px;
+    box-sizing: border-box; }
+  ._f-help h3 {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: bold; }
+    ._f-help h3 a {
+      color: #444; }
+  ._f-help p {
+    line-height: 22px; }
+    ._f-help p a:hover {
+      color: #e01222; }
+
+._f-hotline {
+  text-align: left; }
+  ._f-hotline h4 {
+    line-height: 34px;
+    font-size: 16px; }
+  ._f-hotline h5 {
+    line-height: 34px;
+    font-size: 18px;
+    color: #333; }
+
+._f-WeChat {
+  text-align: center; }
+  ._f-WeChat img {
+    width: 80px;
+    height: 80px; }
+
+._f-website {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 10px 0;
+  line-height: 22px; }
+  ._f-website a {
+    margin: 0 10px;
+    color: #999; }
+
+.c-red {
+  color: #f51322 !important; }
+
+.c-999 {
+  color: #999; }
+
+.c-333 {
+  color: #333; }
+
+.u-right {
+  float: right; }
+
+.u-left {
+  float: left; }
+
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+
+._u-body {
+  background-color: #f5f5f5; }
+
+._safe {
+  padding: 25px;
+  background-color: #fff; }
+  ._safe > h3 {
+    font-weight: bold;
+    color: #333; }
+
+button {
+  cursor: pointer; }
+
+.fade-in {
+  position: fixed;
+  top: 220px;
+  right: -235px;
+  z-index: 9999;
+  width: 235px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box; }
+  .fade-in h3 {
+    float: left;
+    width: 35px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #f8b45b;
+    color: #fff;
+    text-align: center; }
+  .fade-in p {
+    float: left;
+    width: 200px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fef3e5;
+    color: #f8b45b;
+    padding-left: 10px;
+    box-sizing: border-box; }
+
+.default {
+  position: fixed;
+  top: 360px;
+  left: 50%;
+  z-index: 9999;
+  margin-left: -120px;
+  width: 240px;
+  padding: 10px 20px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px; }
+  .default > h3 {
+    line-height: 30px; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 404741 */
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot");
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.woff") format("woff"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.svg#iconfont") format("svg"); }
+._nt {
+  min-height: 500px;
+  width: 1200px;
+  margin: 40px auto; }
+
+/*# sourceMappingURL=notice.css.map */

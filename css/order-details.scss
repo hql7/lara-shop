@@ -1,0 +1,267 @@
+@import "u_header";
+@import "u_menu";
+@import "util";
+
+//----------------------------------------------------
+
+._de {
+  padding-bottom: 400px;
+}
+
+._de-dh {
+  height: 40px;
+  line-height: 40px;
+}
+
+._de_jd {
+  height: 300px;
+  background-color: #fff;
+  border-top: 2px solid #71d99b;
+  box-sizing: border-box;
+  > div {
+    height: 100%;
+  }
+
+  ._jd_cz {
+    float: left;
+    width: 260px;
+    text-align: center;
+    border-right: 1px solid #ebebeb;
+    padding-top: 45px;
+    box-sizing: border-box;
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #47bb76;
+      margin: 25px 0;
+    }
+
+    a {
+      display: block;
+      width: 100px;
+      line-height: 28px;
+      height: 30px;
+      border: 1px solid #e45050;
+      color: #e45050;
+      box-sizing: border-box;
+      margin: 0 auto 15px;
+      cursor: pointer;
+    }
+  }
+
+  ._jd_ {
+    margin-left: 260px;
+    padding: 20px;
+    line-height: 22px;
+    > div {
+      float: left;
+      margin-top: 40px;
+      text-align: center;
+    }
+    i {
+      color: #999;
+    }
+
+    .ico {
+      width: 80px;
+      i {
+        font-size: 24px;
+        color: #999;
+      }
+    }
+
+    .spot {
+      width: 125px;
+    }
+  }
+
+  .is_ok {
+    i {
+      color: #47bb76;
+    }
+  }
+}
+
+//---------------------------------------------------------
+
+._de_receipt {
+  height: 280px;
+  background-color: #fff;
+  margin: 30px 0;
+  > div {
+    height: 100%;
+  }
+
+  ._re_sh {
+    float: left;
+    width: 260px;
+    border-right: 1px solid #ebebeb;
+    line-height: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    > h3 {
+      line-height: 48px;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    > div {
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 60px;
+      height: 100%;
+      text-align: right;
+    }
+    .item-r {
+      float: right;
+      width: 160px;
+    }
+  }
+
+  ._re_wl {
+    padding: 20px;
+    margin-left: 260px;
+    box-sizing: border-box;
+  }
+
+  ._r_w_t {
+    height: 140px;
+    overflow-y: scroll;
+    > div {
+      float: left;
+      width: 80px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+    > ul {
+      margin-left: 80px;
+    }
+  }
+
+  ._r_w_b {
+    margin-top: 30px;
+    label {
+      display: inline-block;
+      width: 80px;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    a {
+      margin: 0 10px;
+      color: #0c71bb;
+      cursor: pointer;
+      &:hover {
+        color: #f40000;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------
+
+._de_good {
+  border: 1px solid #ededed;
+  padding-bottom: 30px;
+  background-color: #fff;
+  tr {
+    border-bottom: 1px solid #ededed;
+  }
+  th {
+    line-height: 30px;
+    background-color: #f9f9f9;
+  }
+  td {
+    padding: 18px 0;
+  }
+
+  ._de_th1 {
+    width: 500px;
+    padding-left: 85px;
+    box-sizing: border-box;
+  }
+  ._de_th2 {
+    width: 200px;
+  }
+  ._de_th3, ._de_th4 {
+    width: 140px;
+  }
+
+  ._img {
+    float: left;
+    width: 72px;
+    height: 72px;
+    margin-left: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  ._title {
+    margin-left: 140px;
+    color: #333;
+  }
+}
+
+._de_pay_info {
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 30px;
+  line-height: 26px;
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  span {
+    color: #333;
+    font-size: 14px;
+  }
+  em {
+    font-size: 14px;
+    color: #333;
+  }
+
+  ._pay {
+    color: #e4393c;
+    span {
+      color: #e60d11;
+    }
+    em {
+      font-size: 18px;
+      font-weight: bold;
+      color: #e4393c;
+    }
+  }
+}
+
+//---------------------------------------------------
+
+.pop_back {
+  padding: 10px 25px;
+  display: none;
+  li {
+    padding: 5px 0;
+    line-height: 22px;
+    span {
+      margin-right: 10px;
+    }
+    textarea {
+      width: 260px;
+      height: 80px;
+      border: 1px solid #e6e6e6;
+      padding: 10px;
+    }
+    label {
+      vertical-align: top;
+      color: #333;
+    }
+  }
+}

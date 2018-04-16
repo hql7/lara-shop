@@ -1,0 +1,122 @@
+@import "u_header";
+@import "util";
+
+//-----------------------------------------------------------
+
+._ev_top {
+  height: 110px;
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  > h3 {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+  span {
+    margin-left: 20px;
+    color: #999;
+  }
+  em {
+    color: #333;
+  }
+}
+
+//-------------------------------------------------------------
+
+._ev_bot {
+  background-color: #fff;
+  > div {
+    overflow: hidden;
+  }
+  ._l {
+    float: left;
+    width: 390px;
+    padding: 50px 100px;
+    border-right: 1px solid #ededed;
+    box-sizing: border-box;
+    img {
+      width: 120px;
+      height: 120px;
+      margin: 0 35px 15px;
+    }
+    h3 {
+      line-height: 22px;
+      height: 66px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical
+    }
+    a {
+      color: #333;
+    }
+    > p {
+      margin-top: 5px;
+    }
+    em {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  ._r {
+    padding: 10px;
+    margin-left: 390px;
+    li {
+      margin-top: 30px;
+      overflow: hidden;
+    }
+    label {
+      float: left;
+      width: 140px;
+      font-size: 14px;
+      text-align: right;
+      padding-right: 30px;
+      box-sizing: border-box;
+    }
+    div {
+      margin-left: 140px;
+    }
+    textarea {
+      width: 550px;
+      height: 120px;
+      border: 1px solid #e0e0e0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+  .upImg {
+    font-size: 24px;
+  }
+
+  .img_box {
+    margin-top: 5px;
+    img {
+      width: 65px;
+      height: 65px;
+      margin-left: 10px;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+
+._ev_btn {
+  margin-top: 20px;
+  padding: 25px 0;
+  background-color: #fff;
+  text-align: center;
+  > button {
+    width: 220px;
+    height: 50px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 50px;
+    background-color: #e2393c;
+    border: none;
+    border-radius: 5px;
+  }
+}

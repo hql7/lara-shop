@@ -1,0 +1,34 @@
+div._u_ {
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+//左侧菜单
+._u_menu {
+  float: left;
+  width: 140px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  dl {
+    margin-bottom: 20px;
+  }
+  dt {
+    color: #333;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  i {
+    margin-right: 10px;
+  }
+  dd {
+    line-height: 24px;
+    font-size: 14px;
+    padding-left: 25px;
+  }
+}
+
+._u_cont {
+  margin-left: 150px;
+}

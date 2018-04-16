@@ -1,0 +1,167 @@
+.c-red {
+  color: #f51322 !important; }
+
+.c-999 {
+  color: #999; }
+
+.c-333 {
+  color: #333; }
+
+.u-right {
+  float: right; }
+
+.u-left {
+  float: left; }
+
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+
+._u-body {
+  background-color: #f5f5f5; }
+
+._safe {
+  padding: 25px;
+  background-color: #fff; }
+  ._safe > h3 {
+    font-weight: bold;
+    color: #333; }
+
+button {
+  cursor: pointer; }
+
+.fade-in {
+  position: fixed;
+  top: 220px;
+  right: -235px;
+  z-index: 9999;
+  width: 235px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box; }
+  .fade-in h3 {
+    float: left;
+    width: 35px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #f8b45b;
+    color: #fff;
+    text-align: center; }
+  .fade-in p {
+    float: left;
+    width: 200px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fef3e5;
+    color: #f8b45b;
+    padding-left: 10px;
+    box-sizing: border-box; }
+
+.default {
+  position: fixed;
+  top: 360px;
+  left: 50%;
+  z-index: 9999;
+  margin-left: -120px;
+  width: 240px;
+  padding: 10px 20px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px; }
+  .default > h3 {
+    line-height: 30px; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 404741 */
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot");
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.woff") format("woff"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.svg#iconfont") format("svg"); }
+._pay {
+  padding: 0 100px; }
+
+._pay_logo {
+  padding-top: 30px;
+  overflow: hidden; }
+  ._pay_logo > h1 {
+    float: left; }
+  ._pay_logo img {
+    width: 130px;
+    height: 52px;
+    vertical-align: middle; }
+  ._pay_logo label {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #333; }
+  ._pay_logo > span {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333; }
+  ._pay_logo em {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff5d5b; }
+
+._pay_order {
+  line-height: 22px;
+  margin: 40px 0 50px; }
+  ._pay_order > h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; }
+
+._pay_mode {
+  height: 600px;
+  box-sizing: border-box;
+  background: url("../imgs/pay_bj.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 100px 80px 0;
+  margin-bottom: 300px; }
+  ._pay_mode > ul {
+    margin-bottom: 30px; }
+  ._pay_mode li {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 25px; }
+    ._pay_mode li i {
+      margin-right: 15px;
+      font-size: 22px;
+      color: #999; }
+    ._pay_mode li img {
+      width: 22px;
+      height: 22px;
+      vertical-align: text-bottom;
+      margin-right: 15px; }
+    ._pay_mode li em {
+      font-size: 16px;
+      color: #333; }
+  ._pay_mode .ic_act {
+    display: none;
+    color: #ff5d5b; }
+  ._pay_mode .pay_act {
+    border: 2px solid #b0c2e1; }
+  ._pay_mode p {
+    line-height: 28px;
+    color: #f40000; }
+  ._pay_mode input {
+    height: 40px;
+    width: 400px;
+    border: 1px solid #ddd;
+    padding-left: 15px;
+    box-sizing: border-box; }
+  ._pay_mode > button {
+    width: 224px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fd706e;
+    border: none;
+    margin-top: 30px; }
+
+/*# sourceMappingURL=pay.css.map */

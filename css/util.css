@@ -1,0 +1,77 @@
+.c-red {
+  color: #f51322 !important; }
+
+.c-999 {
+  color: #999; }
+
+.c-333 {
+  color: #333; }
+
+.u-right {
+  float: right; }
+
+.u-left {
+  float: left; }
+
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+
+._u-body {
+  background-color: #f5f5f5; }
+
+._safe {
+  padding: 25px;
+  background-color: #fff; }
+  ._safe > h3 {
+    font-weight: bold;
+    color: #333; }
+
+button {
+  cursor: pointer; }
+
+.fade-in {
+  position: fixed;
+  top: 220px;
+  right: -235px;
+  width: 235px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box; }
+  .fade-in h3 {
+    float: left;
+    width: 35px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #f8b45b;
+    color: #fff;
+    text-align: center; }
+  .fade-in p {
+    float: left;
+    width: 200px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fef3e5;
+    color: #f8b45b;
+    padding-left: 10px;
+    box-sizing: border-box; }
+
+.default {
+  position: fixed;
+  top: 360px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  padding: 10px 20px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px; }
+  .default > h3 {
+    line-height: 30px; }
+
+/*# sourceMappingURL=util.css.map */

@@ -1,0 +1,62 @@
+@import "u_header";
+@import "u_menu";
+@import "util";
+
+//--------------------------------------------------------------
+
+._wit {
+  padding: 25px;
+  background-color: #fff;
+  > h3 {
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+._wit_box {
+  padding: 20px;
+  > li {
+    line-height: 36px;
+    margin-bottom: 30px;
+    > input {
+      width: 260px;
+      height: 38px;
+      border: 1px solid #e6e6e6;
+      padding-left: 15px;
+      box-sizing: border-box;
+      margin-right: 10px;
+    }
+  }
+  label {
+    display: inline-block;
+    text-align: right;
+    width: 165px;
+    margin-right: 25px;
+  }
+  b {
+    color: #f40000;
+  }
+  strong {
+    margin-right: 30px;
+    font-size: 14px;
+    > input {
+      width: 15px;
+      height: 15px;
+      vertical-align: text-bottom;
+      margin-right: 5px;
+    }
+  }
+
+  ._m_zh {
+    padding-left: 195px;
+  }
+
+  ._wit_btn {
+    width: 100px;
+    height: 34px;
+    background-color: #e33434;
+    color: #fff;
+    margin:40px 0 0 195px;
+    border: none;
+  }
+}

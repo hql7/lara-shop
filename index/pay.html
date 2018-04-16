@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>支付订单_支付方式_快捷支付_支付宝_微信_余额_lara-shop</title>
+    <meta name="keywords" content="支付订单_支付方式_快捷支付_支付宝_微信_余额_个人中心">
+    <meta name="Description" content="选择支付方式支付宝、微信等快捷支付购物更轻松">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_l372vfsrvskvgqfr.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/pay.css">
+</head>
+<body>
+
+<!--主体-->
+<div class="content _pay">
+    <!--logo信息-->
+    <div class="_pay_logo">
+        <h1 class="site-logo">
+            <a href="index.html"><img src="../imgs/logo.png" alt="logo"></a>
+            <label>收银台</label>
+        </h1>
+        <span class="u-right">应付金额 <em id="o_money">0.00</em>元</span>
+    </div>
+    <!--订单信息-->
+    <div class="_pay_order">
+        <h3><label>订单号：</label><span id="o_id"></span></h3>
+        <p><label>下单时间：</label><span id="o_time"></span></p>
+        <p><label>收货地址：</label><span id="o_addr"></span></p>
+    </div>
+    <!--支付方式-->
+    <div class="_pay_mode">
+        <ul id="_pay_box">
+
+        </ul>
+        <div>
+            <p>请输入交易密码</p>
+            <input type="password" id="tradePass">
+        </div>
+        <button onclick="toPay()">立即支付</button>
+        <div id="pay_form"></div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/pay.js"></script>
+</body>
+</html>

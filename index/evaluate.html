@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>商品评价_商品详情_商品评分_lara-shop</title>
+    <meta name="keywords" content="商品评价_商品详情_商品评分_个人中心">
+    <meta name="Description" content="评价商品让其他买家看到真实可靠的商品信息">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_b9sh669ksj6y9zfr.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/evaluate.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a>
+            </h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content">
+    <!--评价订单头部信息-->
+    <div class="_ev_top">
+        <h3>评价订单</h3>
+        <p>订单号：<em id="or_no">111</em><span id="or_tm">111</span></p>
+    </div>
+    <!--评价订单内容-->
+    <div class="_ev_bot" id="_ev_bot">
+        <!-- <div>
+             <div class="_l">
+                 <a href="">
+                     <img src="../imgs/good.jpg" alt="">
+                     <h3>Viney新款真皮女士钱包短款韩版
+                         大容量拉链钱包女多卡位小皮夹女
+                         式零钱包 酒红
+                     </h3>
+                 </a>
+                 <p><em>￥120.00</em></p>
+                 <p>红色：颜色</p>
+             </div>
+             <div class="_r">
+                 <ul>
+                     <li><label>满意度</label>
+                         <div id="star" data-score="5"></div>
+                     </li>
+                     <li><label>评价</label>
+                         <div>
+                             <textarea></textarea>
+                         </div>
+                         <div class="img_box" id="img_box">
+                             <button type="button" class="layui-btn" id="test">
+                                 <i class="iconfont icon-shangchuantupian upImg"></i>
+                             </button>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+         </div>-->
+    </div>
+    <!--提交-->
+    <div class="_ev_btn">
+        <button onclick="submitEva()">提交</button>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../star/js/jquery.raty.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/evaluate.js"></script>
+</body>
+</html>

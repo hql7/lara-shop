@@ -1,0 +1,163 @@
+@import "u_header";
+@import "u_menu";
+@import "util";
+
+//-------------------------------------------------------
+
+._apl {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 200px;
+  > h3 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    a {
+      padding: 5px 10px;
+      background-color: #e03235;
+      color: #fff;
+      margin-left: 10px;
+    }
+  }
+}
+
+._apl_good {
+  > table {
+    border: 1px solid #f2f2f2;
+    color: #333;
+  }
+  th {
+    padding: 6px 0;
+    background-color: #f5f5f5;
+  }
+  ._g {
+    width: 700px;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+  td {
+    padding: 12px 0 12px 25px;
+    border: 1px solid #f2f2f2;
+  }
+  img {
+    width: 55px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  span {
+    display: inline-block;
+    width: 600px;
+    line-height: 22px;
+  }
+  > p {
+    margin: 10px 0 20px;
+    em {
+      color: #ff2525;
+    }
+  }
+}
+
+//---------------------------------------------------
+
+._apl_ {
+  ul {
+    border: 1px solid #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  li {
+    line-height: 22px;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  label {
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+    color: #333;
+  }
+  b {
+    color: #f40000;
+    margin: 0 5px;
+  }
+  ._fwlx {
+    span {
+      padding: 5px 20px;
+      border: 1px solid #f2f2f2;
+      margin-right: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+    i {
+      display: none;
+      position: absolute;
+      top: -3px;
+      right: 0;
+      color: #e13235;
+    }
+    .fw_act {
+      border: 1px solid #e13235;
+      i {
+        display: inline-block;
+      }
+    }
+  }
+
+  ._sl {
+    button {
+      width: 22px;
+      height: 22px;
+      border: 1px solid #dadada;
+      background-color: transparent;
+    }
+    input {
+      width: 48px;
+      height: 24px;
+      text-align: center;
+      border: 1px solid #dadada;
+      margin: 0 5px;
+    }
+    span {
+      margin-left: 15px;
+      color: #999;
+    }
+  }
+
+  ._yy {
+    input {
+      height: 24px;
+      border: 1px solid #dadada;
+      margin-right: 10px;
+      padding-left: 10px;
+    }
+    span {
+      color: #999;
+    }
+  }
+
+  textarea {
+    width: 462px;
+    height: 102px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+  }
+}
+
+._apl_img_box{
+  padding-left: 120px;
+  padding-top: 10px;
+  >img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+._apl_submit {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #bfd6af;
+  background-color: #f0f9e9;
+  color: #333;
+  margin-left: 120px;
+}

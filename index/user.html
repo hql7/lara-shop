@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>个人中心_用户信息_订单_余额_优惠券_lara-shop</title>
+    <meta name="keywords" content="个人中心_用户信息_订单_余额_优惠券_个人中心">
+    <meta name="Description" content="个人中心记录了会员的详细资产信息和订单信息">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_j4p5bkmtt0ggb9.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a>
+            </h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont">
+        <!--我的 上部 用户信息-->
+        <div class="_u_c_top">
+            <!--头像-->
+            <div class="_t-header">
+                <div class="_t-h-box">
+                    <img src="../imgs/user-avatar.png" alt="_u_header">
+                    <div class="img-box"></div>
+                </div>
+                <div>
+                    <h3></h3>
+                    <h4></h4>
+                    <p>安全等级：<span></span></p>
+                </div>
+            </div>
+            <!--订单-->
+            <div class="_t-order">
+                <div>
+                    <a href="my-order.html?s=1">
+                        <span class="_o_s0"></span>
+                        <p>待付款 <em class="_o_s0-data">0</em></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="my-order.html?s=3">
+                        <span class="_o_s1"></span>
+                        <p>待收货 <em class="_o_s1-data">0</em></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="my-evaluate.html">
+                        <span class="_o_s2"></span>
+                        <p>待评价 <em class="_o_s2-data">0</em></p>
+                    </a>
+                </div>
+            </div>
+            <!--资产-->
+            <div class="_t-assets">
+                <h3><a href="account-balance.html"><i class="iconfont icon-yue"></i>账户余额： <span>0.00</span></a></h3>
+                <h3><a href="account-integral.html"><i class="iconfont icon-jifen"></i>可用积分： <em>0.00</em></a></h3>
+            </div>
+            <!--优惠券-->
+            <div class="_t-coupon">
+                <i class="iconfont icon-youhuiquan"></i>
+                <p>可用优惠券： <a class="_t-cou-num" href="account-coupon.html">0</a>张
+                    <!--<a href="###">&nbsp;领券</a>-->
+                </p>
+            </div>
+        </div>
+        <!--我的 中部 订单-->
+        <div class="_u_c_cen">
+            <h2>我的订单 <a class="u-right" href="my-order.html?s=0">查看全部订单</a></h2>
+            <div class="_u-order-box">
+                <h3>
+                    <span class="_u-o-time"></span>
+                    <span class="_u-o-no">订单号：<em></em></span>
+                    <span class="_u-o-seller">卖家：<em></em></span>
+                </h3>
+                <table class="_u_o_b">
+                    <tr>
+                        <td class="img_">
+                            <div>
+                                <a href="goods.html">
+                                    <!--<img src="../imgs/user-avatar.png" alt="">-->
+                                    <h3></h3>
+                                    <p>x1</p>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="name_">
+                        </td>
+                        <td class="money_">
+                            <h4>金额￥ <em></em></h4>
+                            <p>快递费 <em></em></p>
+                        </td>
+                        <td class="status_">
+                            <p><em></em></p>
+                            <p><a href="javascript:void (0)" onclick="userOrderDetail()">订单详情</a></p>
+                        </td>
+                        <td class="operate_">
+                            <input type="button" value="立即支付">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--我的 下部 收藏||优惠券-->
+        <div class="_u_c_bot">
+            <!--收藏-->
+            <div class="s_c">
+                <h3>我的收藏 <a class="u-right" href="my-store-up.html">查看全部</a></h3>
+                <div class="s_c_box">
+                </div>
+            </div>
+            <!--优惠券-->
+            <div class="y_h_q">
+                <h3>我的优惠券 <a class="u-right" href="account-coupon.html">查看全部</a></h3>
+                <div class="y_h_q_box">
+                </div>
+            </div>
+        </div>
+        <!--底部 推荐商品-->
+        <div class="u-more-box" id="u-more-box"></div>
+    </div>
+</div>
+
+<!--退款-->
+<div id="pop_back" class="pop_back">
+    <ul>
+        <li>
+            <label>退款方式：</label>
+            <input type="radio" name="back" checked onclick="backStyle(0)">
+            <span>退款至账户余额</span>
+            <input type="radio" name="back" onclick="backStyle(1)">
+            <span>退款至支付宝</span>
+        </li>
+        <li class="ref_ali">
+            <label>支付宝账户：</label>
+            <input type="text" name="payee_account" id="payee_account">
+            <span>请填写您的支付宝账户</span>
+        </li>
+        <li class="ref_ali">
+            <label>真实姓名：</label>
+            <input type="text" name="payee_real_name" id="payee_real_name">
+            <span>请填写您在支付宝登记的真实姓名</span>
+        </li>
+        <li>
+            <label>退款原因：</label>
+            <textarea name="_back_yy" id="_back_yy" placeholder="请尽量描述详细，避免申请被拒绝"></textarea>
+        </li>
+    </ul>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>商品详情_价格_规格_促销活动_折扣秒杀_图片_lara-shop</title>
+    <meta name="keywords" content="商品详情_价格_规格_促销活动_折扣秒杀_图片_个人中心">
+    <meta name="Description" content="商品详情展示商品价格、图片、规格、折扣、活动详细信息">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_1fczut9cc3mr6bt9.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/idangerous.swiper2.7.6.css">
+    <link rel="stylesheet" href="../static/ishare.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/goods.css">
+</head>
+<body>
+<!--头部-->
+<div class="_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><span class="shop-name">为尔商城欢迎你</span><a class="c-red" href="login.html">请登录</a><a
+                    href="register.html">免费注册</a></strong>
+            <ul>
+                <li><a href="javascript:void (0)" onclick="loginStatus('message.html')">消息</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('user.html')">个人中心</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('my-order.html?s=0')">我的订单</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-integral.html')">我的积分</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-coupon.html')">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索-->
+    <div class="_h-search">
+        <div class="ing-logo"><a href="index.html"><h1 class="site-logo"><img src="../imgs/logo.png" alt="logo"></h1>
+        </a></div>
+        <div class="ind-sea-box">
+            <input type="text" placeholder="">
+            <button onclick="search()">搜 索</button>
+            <ul></ul>
+        </div>
+        <div class="ind-cart" onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>我的购物车 <span>0</span>
+        </div>
+    </div>
+    <!--菜单-->
+    <div class="_h-nav">
+        <div class="all-classify">
+            <i class="iconfont icon-caidanA"></i>全部商品分类
+            <div class="menu">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="main-nav">
+            <ul></ul>
+        </div>
+    </div>
+    <!--右侧快捷方式-->
+    <div class="_h-quick-tabs">
+        <a onclick="loginStatus('user.html')"><i class="iconfont icon-user"></i></a>
+        <a onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>
+            购物车
+        </a>
+        <a onclick="loginStatus('my-store-up.html')"><i class="iconfont icon-shoucang"></i></a>
+        <a onclick="loginStatus('footprint.html')" href="###"><i class="iconfont icon-chakan"></i></a>
+        <a href="###"><i class="iconfont icon-kefu-copy"></i></a>
+        <a class="tabs-top" onclick="goTop()" href="javascript:void(0)"><i class="iconfont icon-shang"></i></a>
+    </div>
+</div>
+<!--主体-->
+
+<div class="content">
+    <!--面包屑导航-->
+    <div class="g_crumb" id="g_crumb"></div>
+    <!--商品页 上部 商品信息-->
+    <div class="g_product-intro">
+        <!--商品信息 图片区-->
+        <div class="g_p_img">
+            <img class="img_L" src="" alt="good">
+            <div class="img_s_box">
+                <img class="img_S" src="" alt="">
+                <img class="img_S" src="" alt="">
+                <img class="img_S" src="" alt="">
+                <img class="img_S" src="" alt="">
+                <img class="img_S" src="" alt="">
+            </div>
+            <p>
+                <span onclick="isLogin(3,this)"><i class="iconfont icon-guanzhu1"></i>关注</span>
+                <span id="bdshare" class="bdshare_b fx-show"><i class="iconfont icon-fenxiang"></i>分享</span>
+            </p>
+            <div class="iShare iShare1 fx-box fx-show"></div>
+        </div>
+        <!--分享代码-->
+        <!--  <script id="bdshare_js" type="text/javascript" data="type=button&uid=664845" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=381133"></script>
+          <script type="text/javascript">
+              document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+          </script>-->
+        <!--商品信息 参数区-->
+        <div class="g_p_intro" id="good_form">
+            <!--<form class="good-form" id="good_form" onsubmit="return false">-->
+            <h2></h2>
+            <h3></h3>
+            <div class="g_p-activity" id="g_p-activity">
+                <i class="iconfont icon-xianshiqianggou"></i>
+                <em>优惠促销</em>
+                <strong class="u-right">结束时间<b id="g_p-yhj"></b></strong>
+            </div>
+            <div class="j_q">
+                <p class="j_q_y"><label>原价格</label><s>￥0.00</s></p>
+                <p class="j_q_x"><label>商城价</label><span>￥0.00</span></p>
+                <!--<p class="j_q_q"><label>优惠券</label><i>满0-0</i><i>满0-0</i><a href="###">去领取 >></a></p>-->
+                <div>
+                    <p>累计评价</p>
+                    <p><em id="all_pj">4</em></p>
+                </div>
+            </div>
+            <!-- <p class="p-s-d_">
+             <label>配送到</label>
+             <select name="province" id="province">
+                 <option value="1">河南</option>
+             </select>
+             <select name="city" id="city">
+                 <option value="0">郑州</option>
+             </select>
+             <em>有货</em>
+         </p>-->
+            <!--<h4>由 <strong>蔚蓝旗舰店</strong> 负责发货，并提供售后服务。</h4>-->
+            <ul id="g_spec_box"></ul>
+            <h4 class="num_"><label>数量</label><span onclick="minusNum()">-</span>
+                <input id="buy_num_" type="text" value="1" name="good_num" oninput="isNum()"> <span
+                        onclick="addNum()">+</span>&nbsp;&nbsp;
+                <b>库存 <em id="num_kc"></em> 件</b>
+            </h4>
+            <h5 class="can_buy">
+                <button type="button" class="to_buy" onclick="isLogin(1,this)">立即购买</button>
+                <button type="button" class="add_car" onclick="isLogin(2,this)">加入购物车</button>
+            </h5>
+            <h5 class="cant_buy">
+                <button type="button" class="buy_done">已抢购完</button>
+            </h5>
+            <h6><label>服务承诺</label><b>品质保证</b><b>急速退款</b><b>七天无理由退换</b></h6>
+            <!--</form>-->
+        </div>
+        <!--商品详情 看了又看-->
+        <div class="g_p_see">
+            <h3><b></b><em>看了又看</em><b></b></h3>
+            <div class="_s_box">
+                <div>
+                    <a href="goods.html?id=">
+                        <img src="" alt="good">
+                        <p>$0.00</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="goods.html?id=">
+                        <img src="../imgs/ad-medo.jpg" alt="good">
+                        <p>$0.00</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="goods.html?id=">
+                        <img src="../imgs/ad-medo.jpg" alt="good">
+                        <p>$0.00</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--优惠套餐-->
+    <div class="g_package">
+        <h3><span>优惠套餐</span></h3>
+        <div class="g_pk-box">
+            <!--主商品-->
+            <div class="pk-good">
+                <!--<img src="../imgs/good.jpg" alt="good">-->
+                <!--<h3>斯蒂芬斯蒂芬森的发生的法国大使馆都是双方都阿瑟夫</h3>-->
+            </div>
+            <!--加号-->
+            <div class="pk-plus">
+                <i class="iconfont icon-iconjia"></i>
+            </div>
+            <!--可选套餐-->
+            <div class="pk-tc">
+                <div class="btn-prv pk-btn"><i class="iconfont icon-right1"></i></div>
+                <div class="pk-swi swiper-container">
+                    <div class="swiper-wrapper swi-box">
+                        <!--<div class="swiper-slide"> Slide1</div>-->
+                        <!--<div class="swiper-slide"> Slide2</div>-->
+                        <!--<div class="swiper-slide"> Slide3</div>-->
+                        <!--<div class="swiper-slide"> Slide4</div>-->
+                        <!--<div class="swiper-slide"> Slide5</div>-->
+                        <!--<div class="swiper-slide"> Slide6</div>-->
+                        <!--<div class="swiper-slide"> Slide7</div>-->
+                        <!--<div class="swiper-slide"> Slide8</div>-->
+                        <!--<div class="swiper-slide"> Slide9</div>-->
+                    </div>
+                </div>
+                <div class="btn-nex pk-btn"><i class="iconfont icon-you"></i></div>
+            </div>
+            <!--等号-->
+            <div class="pk-plus">
+                <i class="iconfont icon-dengyu"></i>
+            </div>
+            <!--套餐价-->
+            <div class="pk-pri">
+                <!--<h3>某某套餐</h3>-->
+                <!--<p>原价<s>￥1000</s></p>-->
+                <!--<p>套餐价<em>￥399</em></p>-->
+                <a href="###">立即购买</a>
+            </div>
+        </div>
+    </div>
+    <!--商品页 详情信息-->
+    <div class="g_details">
+        <!--详情信息左侧-->
+        <div class="dt-left">
+            <!--店铺信息-->
+            <div class="dt-shop">
+                <h2>为尔自营旗舰店</h2>
+                <!--<div>
+                    <a><i class="iconfont icon-shangjia"></i>进店逛逛</a>
+                    <a><i class="iconfont icon-guanzhu"></i>收藏店铺</a>
+                </div>-->
+            </div>
+            <!--店铺新品上市-->
+            <div class="dt-onnew">
+                <h3>新品上市</h3>
+                <div class="dt-onn-box">
+                    <!-- <div>
+                         <img src="../imgs/good.jpg" alt="good">
+                         <h4>的咖啡馆还包括很多老公回来开始喝点咖啡更好</h4>
+                         <p>$3333</p>
+                     </div>-->
+                </div>
+            </div>
+        </div>
+        <!--详情信息右侧内容区-->
+        <div class="dt-cont">
+            <ul class="dt-c-title">
+                <li>商品介绍</li>
+                <li>规格参数</li>
+                <li>商品评价</li>
+                <!--<li>商品咨询</li>-->
+                <li>售后保障</li>
+            </ul>
+            <div class="dt-c-con">
+                <div id="g_description">商品详情</div>
+                <div id="g_parameter" class="g_parameter">
+                    <ul>
+                        <li><label></label><span></span></li>
+                    </ul>
+                </div>
+                <div id="g_evaluate" class="g_evaluate">
+                    <h3>好评度 <strong><span class="g_e_rate">95</span>%</strong></h3>
+                    <ul class="g_e_card">
+                        <li class="pj_act">全部评价(<span></span>)</li>
+                        <li>有图(<span></span>)</li>
+                        <li>好评(<span></span>)</li>
+                        <li>中评(<span></span>)</li>
+                        <li>差评(<span></span>)</li>
+                        <li>只看当前商品</li>
+                    </ul>
+                    <div class="g_e_box">
+                        <div id="g_e_box"></div>
+                        <div id="page"></div>
+                        <!--<div>
+                            <div class="_e_l">
+                                <p><img src="../imgs/good.jpg" alt=""><span></span></p>
+                                <h3>h***h</h3>
+                                <h4>银牌会员</h4>
+                            </div>
+                            <div class="_e_r">
+                                <p>评分星级 <em>4</em> 星</p>
+                                <h3>上岛咖啡金黄色的咖啡喝口凉水了咖啡喝</h3>
+                                <div class="_e_s_img">
+                                    <img src="../imgs/good.jpg" alt="">
+                                    <img src="../imgs/good.jpg" alt="">
+                                    <img src="../imgs/good.jpg" alt="">
+                                    <img src="../imgs/good.jpg" alt="">
+                                    <img src="../imgs/good.jpg" alt="">
+                                </div>
+                                <div class="b_img_box"></div>
+                                <p><span>绿色4g</span><span>203909</span></p>
+                                <div class="shop_reply">
+                                    <h4>商家回复：</h4>
+                                    <p>到了法国红酒的时间过来；的</p>
+                                    <p>2013-3333</p>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <!--<div id="g-consult"></div>-->
+                <div id="g_after-sale"></div>
+            </div>
+        </div>
+    </div>
+    <!--猜你喜欢-->
+    <div class="s_like">
+        <h3><strong>猜你喜欢</strong> <span class="u-right" onclick="sendYouLike()"><i class="iconfont icon-shuaxin"></i>换一批</span>
+        </h3>
+        <div class="s_like_box"></div>
+    </div>
+</div>
+<!--脚部-->
+<div class="_footer">
+    <div class="_f-service">
+        <ul>
+            <li><i class="iconfont icon-icon--"></i>商品齐全 愉快购物</li>
+            <li><i class="iconfont icon-kuaidi1"></i>仓库直发 快速配送</li>
+            <li><i class="iconfont icon-unie64c"></i>正规渠道 服务到家</li>
+            <li><i class="iconfont icon-2801"></i>实惠低价 购物无忧</li>
+        </ul>
+    </div>
+    <div class="_f-help">
+        <div class="_f-hotline">
+            <h4>免费客服热线</h4>
+            <h5>777-7777-7777</h5>
+            <p>在线时间 09:00 - 18:00</p>
+        </div>
+        <div class="_f-WeChat">
+            <img class="app_img" src="../imgs/er-code.png" alt="WeChat">
+            <p>扫码下载APP商城</p>
+        </div>
+    </div>
+    <div class="_f-website"></div>
+</div>
+
+<!--登陆窗口-->
+<div id="is_login" class="g_is_login">
+    <form class="pop_login" id="pop_login" onsubmit="return false" autocomplete="off">
+        <ul>
+            <li><label><i class="iconfont icon-yonghu"></i></label><input class="log_name" name="log_name"
+                                                                          type="text"></li>
+            <li><label><i class="iconfont icon-14-01"></i></label><input class="log_pass" name="log_pass"
+                                                                         type="password" autocomplete="new-password"></li>
+            <li class="yzm-box"><label><i class="iconfont icon-anquan"></i></label>
+                <input class="log_code" name="log_code" type="text">
+                <img class="yzm-img" src="" alt="">
+            </li>
+        </ul>
+        <p><a href="register.html">立即注册</a><a href="find-pass.html" class="log-back-pas">找回密码</a></p>
+        <h4 class="log-btn-box">
+            <input type="submit" value="登录" onclick="vada()">
+        </h4>
+    </form>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/iShare.js"></script>
+<script src="../star/js/jquery.raty.min.js"></script>
+<script src="../static/idangerous.swiper2.7.6.min.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/va.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/header_footer.js"></script>
+<script src="../js/goods.js"></script>
+</body>
+</html>

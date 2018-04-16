@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>消息中心_商城消息_系统消息_lara-shop</title>
+    <meta name="keywords" content="消息中心_商城消息_系统消息_个人中心">
+    <meta name="Description" content="消息中心实时反应商城信息永不错过">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_dmi3x5g776vo0f6r.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/message.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html?s=0">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="" alt="lara-shop.cn"><span>为尔商城</span></a></h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _mas_">
+    <!--标题-->
+    <div class="_mas">消息中心</div>
+    <!--左侧菜单-->
+    <div class="_mas_menu" id="_mas_menu">
+        <ul>
+            <li>
+                <div class="i_box">
+                    <i class="iconfont icon-tongzhi"></i>
+                </div>
+                <div class="tit_box">
+                    <h3>系统通知</h3>
+                    <p>新消息</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--右侧内容区-->
+    <div class="_mas_con">
+        <ul id="_mas_con">
+            <li>
+                <h3 class="_m_tit">
+                    <strong></strong>
+                    <span class="u-right"></span>
+                </h3>
+                <div class="_m_con">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <a href="javascript:void (0)" class="_m_see" onclick="messageLook(this)">查看详情
+                    <i class="iconfont icon-xia"></i>
+                    <i class="iconfont icon-shang1 _s"></i>
+                </a>
+            </li>
+        </ul>
+        <div id="page"></div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/message.js"></script>
+</body>
+</html>

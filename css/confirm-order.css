@@ -1,0 +1,452 @@
+.c-red {
+  color: #f51322 !important; }
+
+.c-999 {
+  color: #999; }
+
+.c-333 {
+  color: #333; }
+
+.u-right {
+  float: right; }
+
+.u-left {
+  float: left; }
+
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+
+._u-body {
+  background-color: #f5f5f5; }
+
+._safe {
+  padding: 25px;
+  background-color: #fff; }
+  ._safe > h3 {
+    font-weight: bold;
+    color: #333; }
+
+button {
+  cursor: pointer; }
+
+.fade-in {
+  position: fixed;
+  top: 220px;
+  right: -235px;
+  z-index: 9999;
+  width: 235px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box; }
+  .fade-in h3 {
+    float: left;
+    width: 35px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #f8b45b;
+    color: #fff;
+    text-align: center; }
+  .fade-in p {
+    float: left;
+    width: 200px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fef3e5;
+    color: #f8b45b;
+    padding-left: 10px;
+    box-sizing: border-box; }
+
+.default {
+  position: fixed;
+  top: 360px;
+  left: 50%;
+  z-index: 9999;
+  margin-left: -120px;
+  width: 240px;
+  padding: 10px 20px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px; }
+  .default > h3 {
+    line-height: 30px; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 404741 */
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot");
+  src: url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.woff") format("woff"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.ttf") format("truetype"), url("//at.alicdn.com/t/font_404741_10csvc8221l15rk9.svg#iconfont") format("svg"); }
+._co_header {
+  height: 120px; }
+
+._h-shortcut {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f2f2f2; }
+  ._h-shortcut .w {
+    width: 1200px;
+    margin: 0 auto; }
+    ._h-shortcut .w strong span {
+      margin-right: 20px; }
+    ._h-shortcut .w strong a {
+      border: none; }
+      ._h-shortcut .w strong a:hover {
+        color: #fa0818; }
+  ._h-shortcut ul {
+    float: right; }
+  ._h-shortcut li {
+    float: left; }
+  ._h-shortcut a {
+    padding: 0 15px;
+    border-right: 1px solid #ddd; }
+    ._h-shortcut a:hover {
+      color: #fa0818; }
+  ._h-shortcut .last {
+    position: relative;
+    border-right: none; }
+    ._h-shortcut .last:hover img {
+      display: inline-block; }
+    ._h-shortcut .last img {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      display: none; }
+
+._h_c-search {
+  width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+._c-logo {
+  float: left;
+  margin-top: 20px; }
+  ._c-logo img {
+    width: 120px;
+    height: 54px; }
+  ._c-logo span {
+    font-size: 22px;
+    color: #333;
+    margin-left: 30px;
+    vertical-align: 15px; }
+
+._co_con {
+  padding-bottom: 200px; }
+  ._co_con > p {
+    line-height: 40px;
+    font-size: 16px; }
+
+._co_box {
+  border: 1px solid #f0f0f0;
+  padding: 10px 20px; }
+  ._co_box > h3 {
+    color: #333;
+    line-height: 32px;
+    font-weight: bold; }
+    ._co_box > h3 button {
+      color: #01AAED;
+      border: none;
+      background-color: transparent; }
+
+._co_address, ._co_pay, ._pop_addr {
+  padding: 10px 30px 40px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 15px; }
+  ._co_address > strong, ._co_pay > strong, ._pop_addr > strong {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    border: 2px solid #fa0818;
+    box-sizing: border-box;
+    position: relative; }
+    ._co_address > strong i, ._co_pay > strong i, ._pop_addr > strong i {
+      position: absolute;
+      top: -4px;
+      right: -1px;
+      color: #fa0818; }
+  ._co_address > span, ._co_pay > span, ._pop_addr > span {
+    margin: 0 15px; }
+  ._co_address > em, ._co_pay > em, ._pop_addr > em {
+    margin: 0 20px; }
+  ._co_address button, ._co_pay button, ._pop_addr button {
+    width: 60px;
+    height: 26px;
+    background: transparent;
+    border: 1px solid #f5b2b2;
+    box-sizing: border-box; }
+
+._co_list {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0; }
+  ._co_list ._co_l {
+    height: 180px;
+    background-color: #f3fbfe;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box; }
+  ._co_list ._c-l-img {
+    float: left;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box; }
+    ._co_list ._c-l-img img {
+      width: 100%;
+      height: 100%; }
+  ._co_list ._c-l-info {
+    margin-left: 135px;
+    line-height: 22px; }
+    ._co_list ._c-l-info > h2 {
+      font-size: 14px;
+      font-weight: bold; }
+    ._co_list ._c-l-info > h3 {
+      padding: 5px 0 7px;
+      border-bottom: 1px solid #e3e3e3; }
+      ._co_list ._c-l-info > h3 span {
+        padding: 2px 10px;
+        background-color: #e4393c;
+        color: #fff;
+        font-size: 14px;
+        margin-right: 12px; }
+    ._co_list ._c-l-info > div {
+      margin-top: 10px;
+      overflow: hidden; }
+      ._co_list ._c-l-info > div h3 {
+        float: left;
+        width: 60%;
+        font-size: 14px;
+        color: #333; }
+      ._co_list ._c-l-info > div p {
+        float: left;
+        width: 40%; }
+        ._co_list ._c-l-info > div p em, ._co_list ._c-l-info > div p b, ._co_list ._c-l-info > div p span {
+          display: inline-block;
+          width: 33%; }
+        ._co_list ._c-l-info > div p em {
+          font-size: 14px;
+          font-weight: bold;
+          color: #fa0818; }
+
+._co_invoice {
+  padding: 15px 0 25px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 20px; }
+  ._co_invoice > h3 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f40000; }
+    ._co_invoice > h3 i {
+      margin-right: 7px; }
+  ._co_invoice label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px; }
+  ._co_invoice span {
+    display: inline-block;
+    width: 65px; }
+    ._co_invoice span input {
+      width: 17px;
+      height: 17px;
+      vertical-align: -3px; }
+  ._co_invoice p > input {
+    height: 22px;
+    line-height: 20px;
+    padding-left: 10px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box; }
+
+._co_remarks {
+  padding: 0 15px 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3; }
+  ._co_remarks input {
+    width: 700px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-right: 10px; }
+
+._co_yhq {
+  overflow: hidden;
+  margin: 10px 0; }
+  ._co_yhq > div {
+    float: left;
+    width: 220px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #74d2d4;
+    box-sizing: border-box; }
+  ._co_yhq ._yhq_act {
+    border: 2px solid #e43a3d; }
+  ._co_yhq ._yhq_t {
+    height: 70px;
+    background-color: #74d2d4;
+    padding: 10px 15px;
+    color: #fff;
+    box-sizing: border-box; }
+    ._co_yhq ._yhq_t em {
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 7px; }
+  ._co_yhq ._yhq_b {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    color: #74d2d4; }
+
+._co_summary {
+  padding: 20px;
+  text-align: right;
+  line-height: 32px;
+  font-size: 14px;
+  color: #333; }
+  ._co_summary label {
+    display: inline-block;
+    width: 150px; }
+  ._co_summary input {
+    width: 17px;
+    height: 17px;
+    vertical-align: -3px; }
+  ._co_summary select {
+    padding: 0 7px;
+    height: 26px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; }
+
+._co_payable {
+  text-align: right;
+  height: 90px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #e6e6e6;
+  padding: 15px 0;
+  box-sizing: border-box; }
+  ._co_payable p {
+    color: #999;
+    line-height: 24px; }
+  ._co_payable b {
+    color: #333; }
+  ._co_payable em {
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+    font-size: 16px;
+    color: #e4393c; }
+  ._co_payable strong {
+    font-weight: bold; }
+  ._co_payable i {
+    display: inline-block;
+    text-align: center;
+    width: 130px; }
+  ._co_payable span {
+    margin: 0 10px; }
+
+._co_submit {
+  text-align: right;
+  margin-top: 10px; }
+  ._co_submit button {
+    width: 140px;
+    height: 40px;
+    background-color: #e84447;
+    color: #fff;
+    font-size: 20px;
+    border: none; }
+
+.pop_address {
+  padding: 25px;
+  display: none;
+  box-sizing: border-box; }
+  .pop_address > h3 {
+    font-size: 14px;
+    color: #333;
+    padding-left: 15px; }
+  .pop_address ._pop_addr {
+    padding: 15px;
+    margin: 0; }
+  .pop_address .addr_act {
+    border: 2px solid #b0c2e1; }
+
+.pop_edit_add {
+  padding: 30px;
+  box-sizing: border-box;
+  display: none; }
+  .pop_edit_add li {
+    height: 32px;
+    margin-bottom: 22px; }
+  .pop_edit_add label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 15px; }
+  .pop_edit_add input {
+    width: 234px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    padding-left: 15px;
+    box-sizing: border-box; }
+  .pop_edit_add select {
+    width: 100px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box; }
+  .pop_edit_add em {
+    margin-left: 10px;
+    color: #f92939; }
+
+.pop_pay {
+  display: none;
+  padding: 25px 35px 10px;
+  box-sizing: border-box; }
+  .pop_pay ul {
+    margin-bottom: 10px; }
+  .pop_pay li {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 25px; }
+    .pop_pay li i {
+      margin-right: 15px;
+      font-size: 22px;
+      color: #999; }
+    .pop_pay li img {
+      width: 22px;
+      height: 22px;
+      vertical-align: text-bottom;
+      margin-right: 15px; }
+    .pop_pay li em {
+      font-size: 16px;
+      color: #333; }
+  .pop_pay .ic_act {
+    display: none;
+    color: #ff5d5b; }
+  .pop_pay .pay_act {
+    border: 2px solid #b0c2e1; }
+  .pop_pay p {
+    line-height: 28px;
+    color: #f40000; }
+  .pop_pay input {
+    height: 32px;
+    width: 320px;
+    border: 1px solid #ddd;
+    padding-left: 15px;
+    box-sizing: border-box; }
+
+/*# sourceMappingURL=confirm-order.css.map */

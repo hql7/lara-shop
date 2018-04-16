@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>提现_资金_额度_商城资产_lara-shop</title>
+    <meta name="keywords" content="提现_资金_额度_商城资产_个人中心">
+    <meta name="Description" content="提现可以将用户余额资产转入支付宝等">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_hysb28o8tm89qkt9.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/withdrawals.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><span>为尔商城</span></a></h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html" class="c-red">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont _wit">
+        <h3>账户提现</h3>
+        <form name="witForm" id="witForm" onsubmit="return false">
+            <ul class="_wit_box">
+                <li>
+                    <label><b>*</b>提现金额：</label>
+                    <input type="text" name="_m_je" id="_m_je">
+                    <span>（提现额只能为100的整数倍，当前账户余额：<b id="_w_ye"></b>元）</span>
+                </li>
+                <li>
+                    <label><b>*</b>提现方式：</label>
+                    <strong><input type="radio" name="_w_tp" onclick="choseWitType(0)">支付宝</strong>
+                    <strong><input type="radio" name="_w_tp" onclick="choseWitType(1)">微信</strong>
+                    <b>如果您没有绑定微信，无法选择微信提现，请移步&nbsp;个人中心->账号绑定&nbsp;进行绑定</b>
+                </li>
+                <!--<li>-->
+                    <!--<label>联系方式：</label>-->
+                    <!--<input type="text" name="_m_tel" id="_m_tel">-->
+                    <!--<span>请填写能联系到你的方式，以便后台审核</span>-->
+                <!--</li>-->
+                <li id="_zh">
+                    <label><b>*</b>收款账号：</label>
+                    <input type="text" name="_m_zh" id="_m_zh">
+                    <p class="_m_zh">您的虚拟账户号（支付宝），当您选择微信提现时，只需您的账号绑定微信即可，无需输入账号</p>
+                </li>
+                <li>
+                    <label><b>*</b>开户人姓名：</label>
+                    <input type="text" name="_m_na" id="_m_na">
+                    <span>收款账号的开户人姓名，请如实填写以免收不到提现账款</span>
+                </li>
+                <li>
+                    <label><b>*</b>支付密码：</label>
+                    <input type="password" name="_m_ps" id="_m_ps">
+                </li>
+                <li>
+                    <button class="_wit_btn" onclick="vada(this)">确认提现</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/va.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/withdrawals.js"></script>
+</body>
+</html>

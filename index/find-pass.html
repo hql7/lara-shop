@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>找回密码_安全便捷lara-shop</title>
+    <meta name="keywords" content="找回密码_安全便捷lara-shop">
+    <meta name="Description" content="找回密码轻松便捷购物无忧">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_qldnzfbtheqoxbt9.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/find-pass.css">
+</head>
+<body class="reg-body">
+<!--找回密码-->
+<div class="reg-header-box">
+    <h1 class="reg-header">
+        <em class="site-logo">
+            <img src="../imgs/logo.png" alt="" width="140" height="40">
+        </em>
+        <strong>找回密码</strong>
+        <b>已有账号？<a href="login.html">请登录</a></b>
+    </h1>
+</div>
+<div class="reg-box _email">
+    <div id="va_mode"><span onclick="vaMode(0)">手机号验证</span><span onclick="vaMode(1)">邮箱验证</span>
+    </div>
+    <form name="pass_form" id="pass_form" onsubmit="return false">
+        <ul>
+            <li><label>登录账号</label><input class="_ipt_m" name="account" id="account" type="text"
+                                          placeholder="请输入您的账号"></li>
+            <li class="_ph"><label>手机号</label><input class="_ipt_m" name="new_phone" id="new_phone" type="text"
+                                                     placeholder="请输入您绑定的手机号"></li>
+            <li class="_em"><label>绑定邮箱</label><input class="_ipt_m" name="new_email" id="new_email" type="text"
+                                                     placeholder="请输入您绑定的邮箱账号"></li>
+            <li><label>验证码</label><input type="text" id="code" name="code"><span class="yzm_box" onclick="getYzm()"><img
+                    src=""
+                    alt="yzm"
+                    id="yzm_img"></span>
+            </li>
+            <li class="_ph"><label>手机验证码</label><input type="text" id="ph_code" name="ph_code">
+                <button class="_send" onclick="sendCode(this,1)" type="button">发送手机验证码</button>
+            </li>
+            <li class="_em"><label>邮箱验证码</label><input type="text" id="em_code" name="em_code">
+                <button class="_send" onclick="sendCode(this,0)" type="button">发送验证码邮件</button>
+            </li>
+            <li><label>新密码</label><input class="_ipt_m" name="new_pass" id="new_pass" type="password"
+                                         placeholder="请输入新密码"></li>
+            <li><label>确认新密码</label><input class="_ipt_m" name="qr_pass" id="qr_pass" type="password"
+                                           placeholder="请确认新密码"></li>
+            <li><label></label>
+                <button class="_sub_btn" onclick="changePassWord(this)">确认提交</button>
+            </li>
+        </ul>
+    </form>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/va.js"></script>
+<script src="../js/find-pass.js"></script>
+</body>
+</html>

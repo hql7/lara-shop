@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>收货地址_购物地址_便捷购物_lara-shop</title>
+    <meta name="keywords" content="收货地址_购物地址_便捷购物_个人中心">
+    <meta name="Description" content="设置收货地址可以方便快捷的提高购物体验和效率">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_if4pxdc4ttq33di.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/address.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a></h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html" class="c-red">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont _adr">
+        <h3>地址管理
+            <button class="u-right" onclick="editAddress(this,'new')">新增地址</button>
+        </h3>
+        <table>
+            <thead>
+            <tr>
+                <th>收货人</th>
+                <th>所在地</th>
+                <th>详细地址</th>
+                <th>联系电话</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="_adr_list">
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>已保存<span id="_adr_y">1</span>条地址，还可以保存<span id="_adr_n">19</span>条地址</p>
+    </div>
+</div>
+
+<!--编辑地址-->
+<div id="pop_edit_add" class="pop_edit_add">
+    <form id="edit_add_form" class="edit_add_form" onsubmit="return false">
+        <ul>
+            <li><label>收货人：</label><input type="text" id="consignee" name="consignee"></li>
+            <li>
+                <label>所在地区：</label>
+                <select name="province" id="province">
+                </select>
+                <select name="city" id="city"></select>
+                <select name="county" id="county"></select>
+            </li>
+            <li><label>详细地址：</label><input type="text" id="street" name="street"></li>
+            <li><label>手机号码：</label><input type="text" id="mobile" name="mobile"></li>
+            <li><label>固定电话：</label><input type="text" id="phone" name="phone"></li>
+            <li><label>邮编：</label><input type="text" id="zip" name="zip"></li>
+        </ul>
+    </form>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/va.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/address.js"></script>
+</body>
+</html>

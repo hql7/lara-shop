@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>商城秒杀_限时抢购_团购_折扣价_秒杀价_lara-shop</title>
+    <meta name="keywords" content="商城秒杀_限时抢购_团购_折扣价_秒杀价_个人中心">
+    <meta name="Description" content="商城秒杀提供限时促销和团购活动低价好货">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_9p28wroiz1v8ia4i.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/group-flash.css">
+</head>
+<body>
+<!--头部-->
+<div class="_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><span class="shop-name">为尔商城欢迎你</span><a class="c-red" href="login.html">请登录</a><a
+                    href="register.html">免费注册</a></strong>
+            <ul>
+                <li><a href="javascript:void (0)" onclick="loginStatus('message.html')">消息</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('user.html')">个人中心</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('my-order.html?s=0')">我的订单</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-integral.html')">我的积分</a></li>
+                <li><a href="javascript:void (0)" onclick="loginStatus('account-coupon.html')">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img" src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索-->
+    <div class="_h-search">
+        <div class="ing-logo"><a href="index.html"><h1 class="site-logo"><img src="../imgs/logo.png" alt="logo"></h1></a></div>
+        <div class="ind-sea-box">
+            <input type="text">
+            <button onclick="search()">搜 索</button>
+            <ul></ul>
+        </div>
+        <div class="ind-cart" onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>我的购物车 <span>0</span>
+        </div>
+    </div>
+    <!--菜单-->
+    <div class="_h-nav">
+        <div class="all-classify">
+            <i class="iconfont icon-caidanA"></i>全部商品分类
+            <div class="menu">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="main-nav">
+            <ul></ul>
+        </div>
+    </div>
+    <!--右侧快捷方式-->
+    <div class="_h-quick-tabs">
+        <a onclick="loginStatus('user.html')"><i class="iconfont icon-user"></i></a>
+        <a onclick="loginStatus('cart.html')">
+            <i class="iconfont icon-cart"></i>
+            购物车
+        </a>
+        <a onclick="loginStatus('my-store-up.html')"><i class="iconfont icon-shoucang"></i></a>
+        <a onclick="loginStatus('footprint.html')" href="###"><i class="iconfont icon-chakan"></i></a>
+        <a href="###"><i class="iconfont icon-kefu-copy"></i></a>
+        <a class="tabs-top" onclick="goTop()" href="javascript:void(0)"><i class="iconfont icon-shang"></i></a>
+    </div>
+</div>
+<!--主体-->
+<div class="content">
+    <!--分类选项-->
+    <div class="_cp_option">
+        <ul id="_cp_option_box">
+        </ul>
+    </div>
+    <!--列表-->
+    <div id="_gf_box" class="_gf_box">
+        <!--    <div>
+                <div class="_l">
+                    <img src="../imgs/good.jpg" alt="good">
+                </div>
+                <div class="_r">
+                    <h3>智利进口红酒 智象美露干红
+                        葡萄酒 750ml*6瓶
+                    </h3>
+                    <p><em>￥89.00</em><s>￥123.00</s></p>
+                    <h4>已购：21 <span class="u-right">总数：100</span></h4>
+                    <button class="_buy">立即抢购</button>
+                </div>
+            </div>-->
+    </div>
+    <!--分页-->
+    <div id="page"></div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/header_footer.js"></script>
+<script src="../js/group-flash.js"></script>
+</body>
+</html>

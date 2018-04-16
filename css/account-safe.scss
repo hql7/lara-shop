@@ -1,0 +1,93 @@
+@import "u_header";
+@import "u_menu";
+@import "util";
+
+//-----------------------------------------------------
+
+._safe {
+  padding: 25px;
+  background-color: #fff;
+  > h3 {
+    font-weight: bold;
+    color: #333;
+  }
+
+  ._t {
+    margin-top: 10px;
+    height: 100px;
+    background-color: #fdfcf2;
+    padding: 14px 20px;
+    box-sizing: border-box;
+  }
+  ._img {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    float: left;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../imgs/r-mark.png") no-repeat;
+      background-size: 72px 72px;
+    }
+  }
+
+  ._con {
+    margin-left: 90px;
+    line-height: 24px;
+    > h3 {
+      font-weight: bold;
+      color: #333;
+    }
+    > p {
+      > i {
+        color: #ffe034;
+        margin-right: 2px;
+      }
+      > b {
+        color: #538abc;
+      }
+      > span {
+        color: #333;
+        margin-right: 10px;
+      }
+      > em {
+        margin-right: 10px;
+        color: #7abd54;
+      }
+      > strong {
+        color: #ff843e;
+      }
+    }
+  }
+
+  ._b {
+    padding: 30px;
+    li {
+      height: 90px;
+      line-height: 30px;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 30px 50px 30px 0;
+      box-sizing: border-box;
+    }
+    label {
+      display: inline-block;
+      text-align: center;
+      width: 200px;
+      font-size: 18px;
+      font-weight: bold;
+      border-right: 1px solid #e6e6e6;
+      margin-right: 15px;
+    }
+    a {
+      color: #538abc;
+    }
+  }
+}

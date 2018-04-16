@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>会员注册_商城_lara-shop</title>
+    <meta name="keywords" content="会员注册_商城_lara-shop">
+    <meta name="Description" content="lara-shop商城会员注册">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_hysb28o8tm89qkt9.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body class="reg-body">
+<!--注册头部-->
+<div class="reg-header-box">
+    <h1 class="reg-header">
+        <a href="index.html" class="site-logo"><img src="../imgs/logo.png" alt="" width="140" height="40"></a>
+        <strong>会员注册</strong>
+        <span>已有账号？<a href="login.html">请登录</a></span>
+    </h1>
+</div>
+<div class="reg-box">
+    <!--<div id="va_mode"><span onclick="vaMode(1)">手机号验证</span><span onclick="vaMode(0)">邮箱验证</span></div>-->
+    <form id="register_form" onsubmit="return false">
+        <ul>
+            <li><label>用 户 名</label><input name="reg_name" id="reg_name" type="text"></li>
+            <li><label>设 置 密 码</label><input id="reg_pass" name="reg_pass" type="password"></li>
+            <li><label>确 认 密 码</label><input name="qr_reg_pass" type="password"></li>
+            <li class="_ph"><label>手 机 号</label><input name="reg_phone" id="reg_phone" type="text"></li>
+            <li class="_em"><label>邮 箱</label><input name="reg_email" id="reg_email" type="text"></li>
+            <li><label>验 证 码</label><input name="img_code" id="code" type="text"><img class="img-code" src="" alt="">
+            </li>
+            <li class="_ph"><label>手机验证码</label><input name="phone_code" id="phone_code" type="text">
+                <button class="phone-code get-rsg-sms" onclick="sendCode(this,1)">获取验证码</button></li>
+            <li class="_em"><label>邮箱验证码</label><input name="email_code" id="email_code" type="text">
+                <button class="phone-code get-rsg-sms" onclick="sendCode(this,0)">获取验证码</button></li>
+        </ul>
+        <p><input type="checkbox" name="agree">阅读并同意 <a href="javascript:void(0)" id="xy" onclick="seeAgreement()">《 用户注册协议 》</a></p>
+        <button class="reg_subit" onclick="register()">立即注册</button>
+    </form>
+</div>
+
+<div class="mask"></div>
+<div id="pop_xy" class="pop_xy">
+    <div class="_close" onclick="closeAgreement()"><i class="iconfont icon-cha"></i></div>
+    <div id="pop_xy_con">
+
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/va.js"></script>
+<script src="../js/register.js"></script>
+</body>
+</html>

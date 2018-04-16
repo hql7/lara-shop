@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <title>账户余额_充值提现_明细记录_lara-shop</title>
+    <meta name="keywords" content="账户余额_充值提现_明细记录_个人中心">
+    <meta name="Description" content="账户余额可以查看余额信息和进行充值提现操作">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_404741_n36ndkvnt4holxr.css">
+    <link rel="stylesheet" href="../static/clear.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/account-balance.css">
+</head>
+<body class="_u-body">
+<!--头部-->
+<div class="_u_header">
+    <!--快捷方式-->
+    <div class="_h-shortcut">
+        <div class="w">
+            <strong><a onclick="loginStatus('user.html')">user</a><span onclick="logOut()">退出</span></strong>
+            <ul>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="user.html">个人中心</a></li>
+                <li><a href="my-order.html">我的订单</a></li>
+                <li><a href="account-integral.html">我的积分</a></li>
+                <li><a href="account-coupon.html">我的优惠券</a></li>
+                <li><a href="help.html">帮助中心</a></li>
+                <li><a class="last"><i class="iconfont icon-shouji"></i>&nbsp;手机版 <img class="app_img"
+                                                                                       src="../imgs/er-code.png"
+                                                                                       width="120" height="120"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="_h_u-nav">
+        <div>
+            <h1 class="site-logo"><a href="index.html"><img src="../imgs/_u-LOGO.png" alt="logo"><span>为尔商城</span></a>
+            </h1>
+            <ul>
+                <li><a href="user.html">个人中心</a></li>
+                <li><select name="account" id="account" onchange="sysAccount(this)">
+                    <option value="">账户设置</option>
+                    <option value="0">个人信息</option>
+                    <option value="1">账号绑定</option>
+                    <option value="2">地址管理</option>
+                    <option value="3">安全设置</option>
+                </select></li>
+                <li><a href="message.html">消息</a></li>
+                <li><a href="###">积分商城</a></li>
+            </ul>
+            <div>
+                <h3>
+                    <input class="_u-search" type="text">
+                    <button onclick="_u_search()">搜索</button>
+                </h3>
+                <h4 onclick="loginStatus('cart.html')"><i class="iconfont icon-cart"></i>我的购物车 (<span
+                        class="_u-h-cat">0</span>)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="content _u_">
+    <!--左侧菜单-->
+    <div class="_u_menu">
+        <dl>
+            <dt><i class="iconfont icon-jiaoyi"></i>交易中心</dt>
+            <dd><a href="my-order.html?s=0">我的订单</a></dd>
+            <dd><a href="my-evaluate.html">我的评价</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-zichan"></i>资产中心</dt>
+            <dd><a href="account-balance.html" class="c-red">账户余额</a></dd>
+            <dd><a href="account-coupon.html">我的优惠券</a></dd>
+            <dd><a href="account-integral.html">我的积分</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-guanzhu"></i>关注中心</dt>
+            <dd><a href="my-store-up.html">我的收藏</a></dd>
+            <dd><a href="footprint.html">我的足迹</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-user"></i>个人中心</dt>
+            <dd><a href="user-info.html">个人信息</a></dd>
+            <dd><a href="account-bind.html">账号绑定</a></dd>
+            <dd><a href="address.html">地址管理</a></dd>
+            <dd><a href="account-safe.html">安全设置</a></dd>
+        </dl>
+        <dl>
+            <dt><i class="iconfont icon-kefu"></i>客户服务</dt>
+            <dd><a href="after-sale.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <!--右侧内容区-->
+    <div class="_u_cont">
+        <!--余额信息-->
+        <div class="_bal_info _bal_main">
+            <h3>账户余额</h3>
+            <div>
+                <div class="_box">
+                    <h3><i class="iconfont icon-jifen3 i-small"></i><span>可用余额</span></h3>
+                    <p><em id="_us_ye">￥0.00</em></p>
+                </div>
+                <div class="_box">
+                    <h3><i class="iconfont icon-dongjiejine"></i><span>冻结余额</span></h3>
+                    <p><em id="_us_djye">￥0.00</em></p>
+                </div>
+                <div class="_box">
+                    <h4><span>账号状态：</span><em id="_us_zt"></em></h4>
+                </div>
+                <div class="_btn">
+                    <h3>
+                        <button onclick="toRecharge()">充值</button>
+                    </h3>
+                    <h3>
+                        <button onclick="toWithdrawals()">提现</button>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!--日志信息-->
+        <div class="_bal_log _bal_main">
+            <ul id="_log_tit">
+                <li>订单支付</li>
+                <li>用户充值</li>
+                <li>管理员充值</li>
+                <li>提现</li>
+                <li>转账</li>
+                <li>管理员扣款</li>
+                <li>退货退款</li>
+                <li>币种转换</li>
+                <li>管理员冻结</li>
+                <li>管理员解冻</li>
+            </ul>
+            <div id="_log_box">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>金额</th>
+                        <th>余额</th>
+                        <th>订单号</th>
+                        <th>钱包类型</th>
+                        <th>备注</th>
+                    </tr>
+                    </thead>
+                    <tbody id="_bal_log">
+
+                    </tbody>
+                </table>
+                <div id="page"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/jquery-1.12.4.js"></script>
+<script src="../static/jquery.form.js"></script>
+<script src="../static/jquery.validate.js"></script>
+<script src="../static/messages_zh.js"></script>
+<script src="../js/va.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/_u_header.js"></script>
+<script src="../js/account-balance.js"></script>
+</body>
+</html>
